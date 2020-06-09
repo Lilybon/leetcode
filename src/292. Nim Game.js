@@ -2,8 +2,5 @@
  * @param {number} n
  * @return {boolean}
  */
-var canWinNim = function(n) {
-    // you will take first turn
-    return n % 4 != 0;
 
-};
+const canWinNim = (n) => n % 4 !== 0 // you will take first turn

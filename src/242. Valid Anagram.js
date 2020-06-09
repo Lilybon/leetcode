@@ -3,12 +3,11 @@
  * @param {string} t
  * @return {boolean}
  */
-var isAnagram = function(s, t) {
-    if (s.length != t.length) return false;
-    var sort_s = sortStr(s);
-    var sort_t = sortStr(t);
-    return sort_s === sort_t;
-    function sortStr(str){
-        return str.split('').sort().join('');
-    }
-};
+
+const isAnagram = (s, t) => {
+  const sortStr = (str) => str.split('').sort().join('')
+  if (s.length != t.length) return false
+  const sort_s = sortStr(s)
+  const sort_t = sortStr(t)
+  return sort_s === sort_t
+}

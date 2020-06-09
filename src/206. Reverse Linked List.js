@@ -5,18 +5,22 @@
  *     this.next = null;
  * }
  */
+
 /**
  * @param {ListNode} head
  * @return {ListNode}
  */
-var reverseList = function(head) {
-    if(head === null || head.next === null) return head;
-    let node = head, prevNode = null, tmp;
-    while(node){
-        tmp = node.next;
-        node.next = prevNode;
-        prevNode = node;
-        node = tmp;
-    }
-    return prevNode;
-};
+
+const reverseList = (head) => {
+  if (head === null || head.next === null) return head
+  let node = head,
+    prevNode = null,
+    tmp
+  while (node) {
+    tmp = node.next
+    node.next = prevNode
+    prevNode = node
+    node = tmp
+  }
+  return prevNode
+}

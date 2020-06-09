@@ -2,20 +2,21 @@
  * @param {number} x
  * @return {number}
  */
-var reverse = function(x) {
-    var INT_MAX = Math.pow(2, 31) - 1;
-    if(0 <= x && x < 10) return x;
 
-    var str = x.toString();
+const reverse = (x) => {
+  const INT_MAX = Math.pow(2, 31) - 1
+  if (0 <= x && x < 10) return x
 
-    var rStr = str.split('').reverse().join('');
+  const str = x.toString()
 
-    if(rStr.indexOf('-') > -1){
-        rStr = '-' + rStr.replace('-', '');
-    }
+  let rStr = str.split('').reverse().join('')
 
-    var result = parseInt(rStr);
+  if (rStr.indexOf('-') > -1) {
+    rStr = '-' + rStr.replace('-', '')
+  }
 
-    if(result > INT_MAX || result < -(INT_MAX + 1)) return 0;
-    return result;
-};
+  let result = parseInt(rStr)
+
+  if (result > INT_MAX || result < -(INT_MAX + 1)) return 0
+  return result
+}

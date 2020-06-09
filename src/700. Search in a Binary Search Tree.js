@@ -5,18 +5,20 @@
  *     this.left = this.right = null;
  * }
  */
+
 /**
  * @param {TreeNode} root
  * @param {number} val
  * @return {TreeNode}
  */
-var searchBST = function(root, val) {
-    if(!root) return null;
-    let current = root;
-    while(current){
-        if(current.val === val) return current;
-        else if(current.val > val) current = current.left;
-        else current = current.right;
-    }
-    return null;
-};
+
+var searchBST = function (root, val) {
+  if (!root) return null
+  let current = root
+  while (current) {
+    if (current.val === val) return current
+    else if (current.val > val) current = current.left
+    else current = current.right
+  }
+  return null
+}
