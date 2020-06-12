@@ -8,8 +8,7 @@ const sortColors = (n) => {
   n.forEach((o) => {
     count[o] += 1
   })
-  let res = [],
-    j = 0
+  let j = 0
   for (let i = 0; i < count.length; i++) {
     while (count[i]) {
       count[i]--
