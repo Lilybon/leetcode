@@ -3,17 +3,22 @@
   "version": "1.0.0",
   "description": "Solutions for leetcode problems",
   "scripts": {
-    "format": "prettier --write \"src/*.js\"",
-    "lint:fix": "eslint \"src/*.js\" --fix"
+    "format": "prettier --write \"**/*.js\"",
+    "lint:fix": "eslint \"**/*.js\" --fix",
+    "test": "jest"
   },
   "repository": "https://github.com/Lilybon/leetcode.git",
   "author": "Lilybon <zebra10029@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.5.2",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
     "husky": "^4.2.5",
+    "jest": "^26.5.3",
     "lint-staged": "^10.2.9",
     "prettier": "^2.0.5"
   },
@@ -23,10 +28,10 @@
     }
   },
   "lint-staged": {
-    "src/*.js": [
+    "**/*.js": [
       "npm run format",
       "npm run lint:fix",
-      "git add"
+      "npm run test"
     ]
   }
 }

@@ -4,7 +4,7 @@
  * @return {string}
  */
 
-function convert(s, numRows) {
+export function convert(s, numRows) {
   if (numRows <= 1) return s
   let zigzag = new Array(numRows).fill('')
   let currRow = 0,

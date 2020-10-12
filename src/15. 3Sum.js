@@ -3,7 +3,7 @@
  * @return {number[][]}
  */
 
-function threeSum(nums) {
+export function threeSum(nums) {
   const n = nums.length
   let result = []
   nums.sort((a, b) => a - b)
