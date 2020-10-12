@@ -11,7 +11,7 @@
  * @return {ListNode}
  */
 
-const sortList = (head) => {
+function sortList(head) {
   if (!head || !head.next) return head
   let slow = head,
     fast = head,
@@ -25,7 +25,7 @@ const sortList = (head) => {
   return merge(sortList(head), sortList(slow))
 }
 
-const merge = (pre, post) => {
+function merge(pre, post) {
   const dummy = new ListNode(undefined)
   let cur = dummy
   while (pre && post) {

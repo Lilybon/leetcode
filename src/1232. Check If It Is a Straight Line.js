@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 
-const checkStraightLine = (coordinates) => {
+function checkStraightLine(coordinates) {
   const n = coordinates.length
   if (n <= 1) return false
   const [x1, y1] = coordinates[0]

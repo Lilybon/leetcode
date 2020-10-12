@@ -11,7 +11,7 @@
  * @return {ListNode}
  */
 
-const swapPairs = (head) => {
+function swapPairs(head) {
   const dummy = new ListNode(undefined, head)
   let prev = dummy
   let cur = dummy.next

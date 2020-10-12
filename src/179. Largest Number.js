@@ -3,7 +3,7 @@
  * @return {string}
  */
 
-const largestNumber = (nums) => {
+function largestNumber(nums) {
   const largest = nums
     .sort((a, b) => {
       let str1 = '' + a + b,

@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-const countServers = (grid) => {
+function countServers(grid) {
   let count = 0
   const rowCounts = new Uint32Array(grid.length),
     colCounts = new Uint32Array(grid[0].length)

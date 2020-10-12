@@ -5,7 +5,7 @@
  */
 
 /*
-const twoSum = (nums, target) => {
+function twoSum (nums, target) {
   for (var i = 0; i < nums.length; i ++) {
     for (var j = i + 1; j < nums.length; j++) {
       if (nums[i] + nums[j] === target){
@@ -16,7 +16,7 @@ const twoSum = (nums, target) => {
 }
 */
 
-const twoSum = (nums, target) => {
+function twoSum(nums, target) {
   let map = {}
   for (let i = 0; i < nums.length; i++) {
     v = nums[i]

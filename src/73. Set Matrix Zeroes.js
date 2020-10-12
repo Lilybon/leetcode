@@ -3,7 +3,7 @@
  * @return {void} Do not return anything, modify matrix in-place instead.
  */
 
-const setZeroes = (matrix) => {
+function setZeroes(matrix) {
   let columnHasZero = {}
   let rowHasZero = {}
   for (let i = 0; i < matrix.length; i++) {

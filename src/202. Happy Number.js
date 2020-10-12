@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 
-const isHappy = (n) => {
+function isHappy(n) {
   // how to handle endless condition?
   // repeat number comes up => return false
   // use hash to remember results in loop

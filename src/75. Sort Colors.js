@@ -3,7 +3,7 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 
-const sortColors = (n) => {
+function sortColors(n) {
   let count = [0, 0, 0]
   n.forEach((o) => {
     count[o] += 1

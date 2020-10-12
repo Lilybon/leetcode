@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-const rob = (nums) => {
+function rob(nums) {
   const n = nums.length
   if (n <= 0) return 0
   if (n === 1) return nums[0]
@@ -12,7 +12,7 @@ const rob = (nums) => {
   return Math.max(plan0, plan1)
 }
 
-const robMax = (nums, start, end) => {
+function robMax(nums, start, end) {
   let prevMax = 0,
     currMax = 0
   for (let i = start; i <= end; i++) {

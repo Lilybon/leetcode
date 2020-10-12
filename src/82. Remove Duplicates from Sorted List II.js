@@ -11,7 +11,7 @@
  * @return {ListNode}
  */
 
-const deleteDuplicates = (head) => {
+function deleteDuplicates(head) {
   const dummy = new ListNode()
   let saved = dummy
   let current = head

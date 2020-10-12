@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-const findMaxLength = (nums) => {
+function findMaxLength(nums) {
   const n = nums.length
   let map = new Map()
   map.set(0, -1)

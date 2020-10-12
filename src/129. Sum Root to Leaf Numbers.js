@@ -12,7 +12,7 @@
  * @return {number}
  */
 
-const sumNumbers = (root, sum = 0) => {
+function sumNumbers(root, sum = 0) {
   if (!root) return 0
   sum = 10 * sum + root.val
   if (!root.left && !root.right) return sum

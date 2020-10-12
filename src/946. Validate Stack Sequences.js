@@ -4,7 +4,7 @@
  * @return {boolean}
  */
 
-const validateStackSequences = (pushed, popped) => {
+function validateStackSequences(pushed, popped) {
   let j = 0,
     stack = []
   for (let i = 0; i < pushed.length; i++) {

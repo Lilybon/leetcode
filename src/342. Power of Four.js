@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 
-const isPowerOfFour = (num) => {
+function isPowerOfFour(num) {
   const digit_str = num.toString(4)
   if (digit_str[0] !== 1) return false
   for (let i = 1; i < digit_str.length; i++) {

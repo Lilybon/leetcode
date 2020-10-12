@@ -13,14 +13,14 @@
  */
 
 /*
-const countNodes = root => {
+function countNodes (root) {
   return root
     ? 1 + countNodes(root.left) + countNodes(root.right)
     : 0
 }
  */
 
-const countNodes = (root) => {
+function countNodes(root) {
   let hLeft = 0,
     hRight = 0
   let pLeft = root,

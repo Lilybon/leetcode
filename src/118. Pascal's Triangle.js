@@ -3,7 +3,7 @@
  * @return {number[][]}
  */
 
-const generate = (numRows) => {
+function generate(numRows) {
   let triangle = []
   for (let i = 0; i < numRows; i++) {
     let row = Array(i + 1).fill(1)

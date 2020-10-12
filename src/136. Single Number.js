@@ -4,8 +4,9 @@
  */
 
 // a XOR b XOR a = b (XOR運算律)
-const singleNumber = (nums) =>
-  nums.reduce((acc, num) => {
+function singleNumber(nums) {
+  return nums.reduce((acc, num) => {
     acc ^= num
     return acc
   }, 0)
+}

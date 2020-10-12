@@ -6,7 +6,7 @@
  * }
  */
 
-const revertTree = (node) => {
+function revertTree(node) {
   if (node == null || (node.left == null && node.right == null)) {
     return node
   }
@@ -16,7 +16,7 @@ const revertTree = (node) => {
   return node
 }
 
-const isSameTree = (left, right) => {
+function isSameTree(left, right) {
   if (left == null && right == null) return true
   if ((left == null && right != null) || (left != null && right == null))
     return false
@@ -31,7 +31,7 @@ const isSameTree = (left, right) => {
  * @return {boolean}
  */
 
-const isSymmetric = (root) => {
+function isSymmetric(root) {
   if (root == null || (root.left == null && root.right == null)) return true
   root.right = revertTree(root.right)
   return isSameTree(root.left, root.right)

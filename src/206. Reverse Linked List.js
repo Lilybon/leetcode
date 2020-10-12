@@ -11,7 +11,7 @@
  * @return {ListNode}
  */
 
-const reverseList = (head) => {
+function reverseList(head) {
   if (head === null || head.next === null) return head
   let node = head,
     prevNode = null,

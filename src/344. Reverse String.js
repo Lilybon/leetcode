@@ -2,4 +2,6 @@
  * @param {string} s
  * @return {string}
  */
-const reverseString = (s) => s.split('').reverse().join('')
+function reverseString(s) {
+  return s.split('').reverse().join('')
+}

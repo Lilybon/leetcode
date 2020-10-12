@@ -4,7 +4,7 @@
  * @return {character}
  */
 
-const findTheDifference = (s, t) => {
+function findTheDifference(s, t) {
   let hash = {}
   for (let i = 0; i < t.length; i++) {
     let alphabet = t[i]

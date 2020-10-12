@@ -13,12 +13,12 @@
  */
 
 /*
-const invertTree = root => {
+function invertTree (root) {
   invertNode(root)
   return root
 }
 
-const invertNode = node => {
+function invertNode (node) {
   if (!node) return
   [node.left, node.right] = [node.right, node.left]
   invertNode(node.left)s
@@ -26,7 +26,7 @@ const invertNode = node => {
 }
  */
 
-const invertTree = (root) => {
+function invertTree(root) {
   if (!root) return root
   let left = root.right
   let right = root.left

@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-const minAreaRect = (points) => {
+function minAreaRect(points) {
   const coord = new Map()
   let globalMin = Infinity
   for (let [x, y] of points) {

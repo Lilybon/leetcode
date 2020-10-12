@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-const hammingWeight = (n) => {
+function hammingWeight(n) {
   let count = 0
   if (n === 0) return 0
   while (n > 0) {

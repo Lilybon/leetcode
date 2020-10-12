@@ -12,7 +12,7 @@
  */
 
 /*
-const deleteDuplicates = head => {
+function deleteDuplicates (head) {
   let current = head
   while (current) {
     if (current.next && current.val === current.next.val) {
@@ -29,7 +29,7 @@ const deleteDuplicates = head => {
 }
  */
 
-const deleteDuplicates = (head) => {
+function deleteDuplicates(head) {
   let current = head
   while (current && current.next) {
     if (current.val === current.next.val) {

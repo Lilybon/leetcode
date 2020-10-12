@@ -3,7 +3,7 @@
  * @return {number[]}
  */
 
-const sortArrayByParity = (A) => {
+function sortArrayByParity(A) {
   let evens = []
   let odds = []
   for (let item of A) {

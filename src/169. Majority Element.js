@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-const majorityElement = (nums) => {
+function majorityElement(nums) {
   let arr = []
   const major = nums.length / 2
   for (let i = 0; i < nums.length; i++) {

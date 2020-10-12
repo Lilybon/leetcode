@@ -5,7 +5,7 @@
  */
 
 /*
- const kthSmallest = (matrix, k) => {
+ function kthSmallest (matrix, k) {
   const n = matrix.length
   let pointer = new Array(n).fill(0)
   let min
@@ -27,7 +27,7 @@
 }
   */
 
-const kthSmallest = function (matrix, k) {
+function kthSmallest(matrix, k) {
   const n = matrix.length
   let start = matrix[0][0],
     end = matrix[n - 1][n - 1]
@@ -41,7 +41,7 @@ const kthSmallest = function (matrix, k) {
   return start
 }
 
-const countLessEqual = (matrix, target) => {
+function countLessEqual(matrix, target) {
   const n = matrix.length
   let i = n - 1,
     j = 0,

@@ -2,7 +2,8 @@
  * @param {number[][]} triangle
  * @return {number}
  */
-const minimumTotal = (triangle) => {
+
+function minimumTotal(triangle) {
   let min = triangle[triangle.length - 1]
   for (let i = triangle.length - 2; i >= 0; i--) {
     let cur = triangle[i]

@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-const lengthOfLongestSubstring = (s) => {
+function lengthOfLongestSubstring(s) {
   let start = 0,
     seen = {},
     maxLen = 0

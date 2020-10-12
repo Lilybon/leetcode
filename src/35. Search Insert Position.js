@@ -3,7 +3,7 @@
  * @param {number} target
  * @return {number}
  */
-const searchInsert = (nums, target) => {
+function searchInsert(nums, target) {
   if (target < nums[0]) return 0
   const len = nums.length
   if (target > nums[len - 1]) return len

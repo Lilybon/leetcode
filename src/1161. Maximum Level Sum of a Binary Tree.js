@@ -12,7 +12,7 @@
  * @return {number}
  */
 
-const maxLevelSum = (root) => {
+function maxLevelSum(root) {
   let queue = [],
     level = 1,
     result = 1,

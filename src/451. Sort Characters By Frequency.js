@@ -3,7 +3,7 @@
  * @return {string}
  */
 
-const frequencySort = (s) => {
+function frequencySort(s) {
   let dict = new Map()
   for (let char of s) {
     dict.set(char, dict.get(char) + 1 || 1)

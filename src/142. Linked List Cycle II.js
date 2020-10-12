@@ -11,7 +11,7 @@
  * @return {ListNode}
  */
 
-const detectCycle = (head) => {
+function detectCycle(head) {
   let slow = head,
     fast = head
   while (true) {

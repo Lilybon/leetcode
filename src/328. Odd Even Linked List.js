@@ -12,7 +12,7 @@
  */
 
 /*
-const oddEvenList = head => {
+function oddEvenList (head) {
   if (!head || !head.next) return head
   let cur = head,
       dummyhead = new ListNode(undefined),
@@ -35,7 +35,7 @@ const oddEvenList = head => {
 }
  */
 
-const oddEvenList = (head) => {
+function oddEvenList(head) {
   if (!head) return head
   let odd = head,
     evenhead = head.next,

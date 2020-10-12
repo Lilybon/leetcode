@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-const numDecodings = (s) => {
+function numDecodings(s) {
   if (!s || s[0] === '0') return 0
 
   let dp = new Array(s.length + 1).fill(0)

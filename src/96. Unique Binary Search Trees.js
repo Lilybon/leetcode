@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-const numTrees = (n) => {
+function numTrees(n) {
   if (n < 0) return 0
   let dp = [0, 1]
   for (let i = 2; i <= n; i++) {

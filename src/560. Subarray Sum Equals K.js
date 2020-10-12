@@ -6,7 +6,7 @@
 
 // 1. Brutal Force
 /*
- const subarraySum = (nums, k) => {
+ function subarraySum (nums, k) {
   const n = nums.length
   let count = 0
   for (let i = 0; i < n; i++) {
@@ -21,7 +21,7 @@
 }
   */
 
-const subarraySum = (nums, k) => {
+function subarraySum(nums, k) {
   const n = nums.length
   let count = 0
   let sum = 0

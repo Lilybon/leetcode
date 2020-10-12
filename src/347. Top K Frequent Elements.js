@@ -4,7 +4,7 @@
  * @return {number[]}
  */
 
-const topKFrequent = function (nums, k) {
+function topKFrequent(nums, k) {
   const freq = nums.reduce((acc, val) => {
     acc.set(val, acc.get(val) ? acc.get(val) + 1 : 1)
     return acc

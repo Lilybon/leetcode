@@ -4,7 +4,7 @@
  * @return {number}
  */
 
-const findMaxAverage = (nums, k) => {
+function findMaxAverage(nums, k) {
   let sum = 0
   for (let i = 0; i < k; i++) {
     sum += nums[i]

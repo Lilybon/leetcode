@@ -11,7 +11,7 @@
  * @return {boolean}
  */
 
-const hasCycle = (head) => {
+function hasCycle(head) {
   let slow = head,
     fast = head
   while (slow && fast && fast.next) {

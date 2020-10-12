@@ -12,7 +12,7 @@
  * @return {ListNode}
  */
 
-const mergeTwoLists = (l1, l2) => {
+function mergeTwoLists(l1, l2) {
   const dummy = new ListNode(undefined)
   let cur = dummy
   while (l1 && l2) {

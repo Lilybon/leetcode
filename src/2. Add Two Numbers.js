@@ -12,7 +12,7 @@
  * @return {ListNode}
  */
 
-const addTwoNumbers = (l1, l2) => {
+function addTwoNumbers(l1, l2) {
   let node1 = l1,
     node2 = l2,
     carry = 0,

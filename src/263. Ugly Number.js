@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 
-const isUgly = (num) => {
+function isUgly(num) {
   if (num <= 0) return false
   if (num === 1 || num === 2 || num === 3 || num === 5) return true
   if (num % 2 === 0) return isUgly(num / 2)

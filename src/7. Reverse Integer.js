@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-const reverse = (x) => {
+function reverse(x) {
   const INT_MAX = Math.pow(2, 31) - 1
   if (0 <= x && x < 10) return x
 

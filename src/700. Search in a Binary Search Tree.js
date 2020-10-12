@@ -12,7 +12,7 @@
  * @return {TreeNode}
  */
 
-var searchBST = function (root, val) {
+function searchBST(root, val) {
   if (!root) return null
   let current = root
   while (current) {

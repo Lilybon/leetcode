@@ -3,7 +3,7 @@
  * @return {number[]}
  */
 
-const deckRevealedIncreasing = (deck) => {
+function deckRevealedIncreasing(deck) {
   const n = deck.length,
     result = new Uint32Array(n),
     queue = Array.from(Array(n), (_, idx) => n - 1 - idx)

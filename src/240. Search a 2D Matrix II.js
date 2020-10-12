@@ -4,7 +4,7 @@
  * @return {boolean}
  */
 
-const searchMatrix = (matrix, target) => {
+function searchMatrix(matrix, target) {
   const m = matrix.length
   if (!m) return false
   const n = matrix[0].length

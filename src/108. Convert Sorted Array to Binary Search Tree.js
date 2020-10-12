@@ -9,7 +9,7 @@
  * @param {number[]} nums
  * @return {TreeNode}
  */
-const sortedArrayToBST = (nums) => {
+function sortedArrayToBST(nums) {
   const generateBST = (start, end) => {
     if (start >= end) return null
     const mid = Math.floor((start + end) / 2)

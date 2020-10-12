@@ -3,7 +3,7 @@
  * @return {number[]}
  */
 
-const spiralOrder = (matrix) => {
+function spiralOrder(matrix) {
   let traverse = []
   const m = matrix.length
   if (!m) return traverse

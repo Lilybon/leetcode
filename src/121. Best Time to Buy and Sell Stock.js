@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-const maxProfit = (prices) => {
+function maxProfit(prices) {
   let maxprofit = 0
   let minprice = Number.MAX_SAFE_INTEGER
   for (var i = 0; i < prices.length; i++) {

@@ -4,7 +4,7 @@
  * @return {number}
  */
 
-const findContentChildren = (g, s) => {
+function findContentChildren(g, s) {
   const rule = (a, b) => b - a
   g.sort(rule)
   s.sort(rule)

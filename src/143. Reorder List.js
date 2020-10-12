@@ -11,7 +11,7 @@
  * @return {void} Do not return anything, modify head in-place instead.
  */
 
-const reorderList = (head) => {
+function reorderList(head) {
   if (!head) return head
   const list = []
   let current = head

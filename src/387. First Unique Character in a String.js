@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-const firstUniqChar = (s) => {
+function firstUniqChar(s) {
   const dict = {}
   for (let i = 0; i < s.length; i++) {
     if (dict[s[i]] !== undefined) dict[s[i]] = -1

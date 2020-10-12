@@ -5,7 +5,7 @@
 
 // 1. Next Array
 /*
-const maxSubarraySumCircular = A => {
+function maxSubarraySumCircular (A) {
   const n = A.length
   let ans = A[0],
       cur = A[0]
@@ -38,7 +38,7 @@ const maxSubarraySumCircular = A => {
 
 // 2. Kadane's (Sign Variant)
 /*
-const maxSubarraySumCircular = A => {
+function maxSubarraySumCircular (A) {
   const S = A.reduce((sum, val) => sum += val, 0) // S = sum(A)
   const ans1 = kadane(A, 0, A.length - 1, 1)
   const ans2 = S + kadane(A, 1, A.length - 1, -1)
@@ -46,7 +46,7 @@ const maxSubarraySumCircular = A => {
   return Math.max(ans1, ans2, ans3)
 }
 
-const kadane = (A, i, j, sign) => {
+function kadane (A, i, j, sign) {
   let ans = -Number.MAX_VALUE,
       cur = -Number.MAX_VALUE
   for (let k = i; k <= j; k++) {
@@ -57,7 +57,7 @@ const kadane = (A, i, j, sign) => {
 }
  */
 
-const maxSubarraySumCircular = (A) => {
+function maxSubarraySumCircular(A) {
   const n = A.length
   let maxStraightSum = -Number.MAX_VALUE,
     minStraightSum = Number.MAX_VALUE,

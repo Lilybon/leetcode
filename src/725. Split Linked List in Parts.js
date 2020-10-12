@@ -12,7 +12,7 @@
  * @return {ListNode[]}
  */
 
-const splitListToParts = (root, k) => {
+function splitListToParts(root, k) {
   let current = root,
     n = 0,
     result = Array(k).fill(null)

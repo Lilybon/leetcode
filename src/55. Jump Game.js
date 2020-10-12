@@ -5,7 +5,7 @@
 
 // DP Bottom-up
 /*
-const canJump = nums => {
+function canJump (nums) {
   const n = nums.length
   let memo = new Array(n).fill(false)
   memo[n - 1] = true
@@ -23,7 +23,7 @@ const canJump = nums => {
  */
 
 // Greedy
-const canJump = (nums) => {
+function canJump(nums) {
   let lastPos = nums.length - 1
   for (let i = lastPos; i >= 0; i--) {
     if (i + nums[i] >= lastPos) lastPos = i

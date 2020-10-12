@@ -13,7 +13,7 @@
  */
 
 /*
-const bstFromPreorder = (preorder, start = 0, end = preorder.length - 1) => {
+function bstFromPreorder (preorder, start = 0, end = preorder.length - 1) {
   if (start > end) return null
   const val = preorder[start]
   let node = new TreeNode(val)
@@ -29,7 +29,7 @@ const bstFromPreorder = (preorder, start = 0, end = preorder.length - 1) => {
 }
  */
 
-const bstFromPreorder = (preorder) => {
+function bstFromPreorder(preorder) {
   let root = new TreeNode(preorder[0])
   for (let i = 1; i < preorder.length; i++) {
     setNode(root, preorder[i])
@@ -37,7 +37,7 @@ const bstFromPreorder = (preorder) => {
   return root
 }
 
-const setNode = (tree, val) => {
+function setNode(tree, val) {
   if (tree.val > val) {
     if (tree.left) setNode(tree.left, val)
     else tree.left = new TreeNode(val)

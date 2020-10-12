@@ -13,7 +13,7 @@
 
 // Intuitive solution (terrible runtime and memory usage)
 /*
-const nextLargerNodes = head => {
+function nextLargerNodes (head) {
   let result = []
   let i = head
   while (i) {
@@ -33,7 +33,7 @@ const nextLargerNodes = head => {
  */
 
 // Stack
-const nextLargerNodes = (head) => {
+function nextLargerNodes(head) {
   let vals = [],
     stack = [],
     current = head

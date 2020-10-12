@@ -13,12 +13,13 @@
  * @return {function}
  */
 
-const solution = (isBadVersion) =>
+function solution(isBadVersion) {
   /**
    * @param {integer} n Total versions
    * @return {integer} The first bad version
    */
-  (n) => {
+
+  return function (n) {
     let min = 1
     let max = n
     while (max > min) {
@@ -28,3 +29,4 @@ const solution = (isBadVersion) =>
     }
     return max
   }
+}

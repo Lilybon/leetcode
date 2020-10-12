@@ -4,7 +4,7 @@
  * @return {number}
  */
 
-const findLength = (A, B) => {
+function findLength(A, B) {
   let max = 0
   const memo = Array.from(
     Array(A.length + 1),

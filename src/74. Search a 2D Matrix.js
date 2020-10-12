@@ -5,7 +5,7 @@
  */
 
 /*
-const searchMatrix = (matrix, target) => {
+function searchMatrix (matrix, target) {
   const m = matrix.length
   if (!m) return false 
   const n = matrix[0].length
@@ -21,7 +21,7 @@ const searchMatrix = (matrix, target) => {
 }
  */
 
-const searchMatrix = (matrix, target) => {
+function searchMatrix(matrix, target) {
   if (!matrix.length || !matrix[0].length) return false
   const [m, n] = [matrix.length, matrix[0].length]
   let [r, c] = [0, n - 1]

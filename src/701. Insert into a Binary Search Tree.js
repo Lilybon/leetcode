@@ -12,7 +12,7 @@
  * @return {TreeNode}
  */
 
-const insertIntoBST = (root, val) => {
+function insertIntoBST(root, val) {
   let newNode = new TreeNode(val)
   if (root === null) {
     root = newNode

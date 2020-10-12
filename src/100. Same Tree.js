@@ -12,7 +12,7 @@
  * @return {boolean}
  */
 
-const isSameTree = (p, q) => {
+function isSameTree(p, q) {
   if (p === null && q === null) return true
   if (p === null && q !== null) return false
   if (p !== null && q === null) return false

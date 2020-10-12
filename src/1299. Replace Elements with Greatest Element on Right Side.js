@@ -3,7 +3,7 @@
  * @return {number[]}
  */
 
-const replaceElements = (arr) => {
+function replaceElements(arr) {
   const n = arr.length
   const result = Array(n)
   result[n - 1] = -1

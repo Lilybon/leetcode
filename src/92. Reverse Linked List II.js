@@ -13,7 +13,7 @@
  * @return {ListNode}
  */
 
-var reverseBetween = function (head, m, n) {
+function reverseBetween(head, m, n) {
   if (m === n) return head
   let position = 0
   let dummyHead = new ListNode(undefined, head)

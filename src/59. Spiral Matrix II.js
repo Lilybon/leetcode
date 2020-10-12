@@ -3,7 +3,7 @@
  * @return {number[][]}
  */
 
-const generateMatrix = (n) => {
+function generateMatrix(n) {
   let i = 0,
     j = 0,
     value = 1,

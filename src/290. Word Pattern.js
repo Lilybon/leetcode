@@ -5,7 +5,7 @@
  */
 
 /*
-const wordPattern = (pattern, s) => {
+function wordPattern (pattern, s) {
   let wordList = s.split(' ')
   const n = pattern.length
   if (n !==  wordList.length) return false
@@ -24,7 +24,7 @@ const wordPattern = (pattern, s) => {
 }
  */
 
-const wordPattern = (pattern, s) => {
+function wordPattern(pattern, s) {
   let wordList = s.split(' ')
   const n = pattern.length
   if (n !== wordList.length) return false

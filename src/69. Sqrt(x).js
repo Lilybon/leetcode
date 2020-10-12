@@ -2,4 +2,7 @@
  * @param {number} x
  * @return {number}
  */
-const mySqrt = (x) => Math.floor(Math.sqrt(x))
+
+function mySqrt(x) {
+  return Math.floor(Math.sqrt(x))
+}

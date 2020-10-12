@@ -12,7 +12,7 @@
  * @return {TreeNode}
  */
 
-const mergeTrees = (t1, t2) => {
+function mergeTrees(t1, t2) {
   if (t1 === null) return t2
   if (t2 === null) return t1
   const new_node = new TreeNode(t1.val + t2.val)

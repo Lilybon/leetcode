@@ -3,7 +3,8 @@
  * @param {number} numRows
  * @return {string}
  */
-const convert = (s, numRows) => {
+
+function convert(s, numRows) {
   if (numRows <= 1) return s
   let zigzag = new Array(numRows).fill('')
   let currRow = 0,

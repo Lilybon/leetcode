@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-const countPrimes = (n) => {
+function countPrimes(n) {
   if (n < 3) return 0
   let f = new Uint8Array(n).fill(1)
   f[0] = 0

@@ -12,7 +12,7 @@
  * @return {TreeNode}
  */
 
-const pruneTree = (root) => {
+function pruneTree(root) {
   if (!root) return root
   root.left = pruneTree(root.left)
   root.right = pruneTree(root.right)

@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-const rob = (nums) => {
+function rob(nums) {
   const length = nums.length
   if (length === 0) return 0
   if (length === 1) return nums[0]

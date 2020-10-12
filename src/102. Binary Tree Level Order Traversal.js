@@ -11,8 +11,12 @@
  * @return {number[][]}
  */
 
-const levelOrder = (root) => {
-  const bfs = (node, level) => {
+function levelOrder(root) {
+  let tvs = [],
+    lv = 1
+  bfs(root, lv)
+  return tvs
+  function bfs(node, level) {
     if (node) {
       // generate new level container only when the first next level element comes up
       if (tvs.length < level) tvs.push([])
@@ -21,8 +25,4 @@ const levelOrder = (root) => {
       if (node.right) bfs(node.right, level + 1)
     }
   }
-  let tvs = [],
-    lv = 1
-  bfs(root, lv)
-  return tvs
 }

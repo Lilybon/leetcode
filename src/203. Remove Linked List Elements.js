@@ -12,7 +12,7 @@
  * @return {ListNode}
  */
 
-const removeElements = (head, val) => {
+function removeElements(head, val) {
   if (head == null) return null
 
   // imaginary node which target for:

@@ -2,7 +2,8 @@
  * @param {number} n
  * @return {string}
  */
-const convertToTitle = (n) => {
+
+function convertToTitle(n) {
   // String.fromCharCode(65) = 'A'， String.fromCharCode(66) = 'B' ..... String.fromCharCode(90) = 'Z'
   let columnTitle = ''
   while (n > 0) {

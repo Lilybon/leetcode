@@ -4,7 +4,7 @@
  * @return {number}
  */
 
-const search = (nums, target) => {
+function search(nums, target) {
   let left = 0,
     right = nums.length - 1
   while (left <= right) {

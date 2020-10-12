@@ -5,7 +5,7 @@
  */
 
 /*
-const customSortString = (S, T) => {
+function customSortString (S, T) {
   let orders = {}
   for (let i = 0; i < S.length; i++) orders[S[i]] = i + 1
   return T
@@ -15,7 +15,7 @@ const customSortString = (S, T) => {
 }
  */
 
-const customSortString = (S, T) => {
+function customSortString(S, T) {
   let counts = {},
     result = ''
   for (let i = 0; i < S.length; i++) counts[S[i]] = 0

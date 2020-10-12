@@ -3,7 +3,7 @@
  * @return {number[]}
  */
 
-const sortedSquares = (A) => {
+function sortedSquares(A) {
   const result = Array(A.length)
   let left = 0,
     right = A.length - 1,

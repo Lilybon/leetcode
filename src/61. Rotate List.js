@@ -12,7 +12,7 @@
  * @return {ListNode}
  */
 
-const rotateRight = (head, k) => {
+function rotateRight(head, k) {
   if (head === null || k === 0) return head
   let node = head,
     len = 1

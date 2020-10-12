@@ -12,7 +12,7 @@
  * @return {ListNode}
  */
 
-const removeNthFromEnd = (head, n) => {
+function removeNthFromEnd(head, n) {
   let dummyHead = new ListNode(null)
   dummyHead.next = head
   let current = head,

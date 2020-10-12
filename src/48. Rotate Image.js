@@ -3,7 +3,7 @@
  * @return {void} Do not return anything, modify matrix in-place instead.
  */
 
-const rotate = (matrix) => {
+function rotate(matrix) {
   // imagine rotate one by one from outer row to center
   const n = matrix.length
   for (let i = 0; i < n / 2; i++) {

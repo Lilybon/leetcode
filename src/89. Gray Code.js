@@ -4,7 +4,7 @@
  */
 
 /*
-const grayCode = n => {
+function grayCode (n) {
   let arr = [0]
   for (let i = 0; i < n; i++) {
     for (let j = arr.length - 1; j >= 0; j--) {
@@ -15,7 +15,7 @@ const grayCode = n => {
 }
  */
 
-const grayCode = (n) => {
+function grayCode(n) {
   if (n === 0) return [0]
   const res = grayCode(n - 1)
   let mask = 1 << (n - 1)

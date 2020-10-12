@@ -4,7 +4,7 @@
  */
 
 /*
-const calculateMinimumHP = dungeon => {
+function calculateMinimumHP (dungeon) {
   let m = dungeon.length
   let n = dungeon[0].length
   let hp = []
@@ -26,7 +26,7 @@ const calculateMinimumHP = dungeon => {
 }
  */
 
-const calculateMinimumHP = (dungeon) => {
+function calculateMinimumHP(dungeon) {
   let m = dungeon.length
   let n = dungeon[0].length
   let hp = new Array(n + 1).fill(Number.MAX_VALUE)
