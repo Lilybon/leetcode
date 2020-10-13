@@ -3,7 +3,7 @@
  * @return {void} Do not return anything, modify board in-place instead.
  */
 
-function solve(board) {
+export function solve(board) {
   if (!board || !board[0] || !board[0].length) return
   const maxRIdx = board.length - 1
   const maxCIdx = board[0].length - 1

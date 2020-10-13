@@ -1,4 +1,4 @@
-class LRUCache {
+export class LRUCache {
   /**
    * @param {number} capacity
    */

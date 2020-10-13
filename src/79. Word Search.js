@@ -5,7 +5,7 @@
  */
 
 /*
-function exist (board, word) {
+export function exist (board, word) {
   if (!board.length || !board[0].length) return false
   const m = board.length
   const n = board[0].length
@@ -36,7 +36,7 @@ function exist (board, word) {
  */
 
 // reset original board grid value when backtracking
-function exist(board, word) {
+export function exist(board, word) {
   if (!board.length || !board[0].length) return false
   const m = board.length
   const n = board[0].length

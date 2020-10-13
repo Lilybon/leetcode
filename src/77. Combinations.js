@@ -4,7 +4,7 @@
  * @return {number[][]}
  */
 
-function combine(n, k) {
+export function combine(n, k) {
   const result = new Array()
   const visited = new Uint8Array(n + 1)
   const row = new Array()

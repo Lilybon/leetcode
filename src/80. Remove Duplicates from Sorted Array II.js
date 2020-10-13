@@ -4,7 +4,7 @@
  */
 
 /*
-function removeDuplicates (nums) {
+export function removeDuplicates (nums) {
   let i = 0,
       j = 0,
       testee,
@@ -27,7 +27,7 @@ function removeDuplicates (nums) {
 }
  */
 
-function removeDuplicates(nums) {
+export function removeDuplicates(nums) {
   let left = 0
   for (let right = 0; right < nums.length; right++) {
     if (nums[right] !== nums[right + 2]) nums[left++] = nums[right]
