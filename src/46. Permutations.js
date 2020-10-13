@@ -3,7 +3,7 @@
  * @return {number[][]}
  */
 
-function permute(nums) {
+export function permute(nums) {
   const result = new Array()
   const visited = new Uint8Array(nums.length)
   const row = new Array()

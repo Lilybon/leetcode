@@ -4,7 +4,7 @@
  * @return {number[]}
  */
 
-function searchRange(nums, target) {
+export function searchRange(nums, target) {
   return [searchFirst(nums, target), searchLast(nums, target)]
 }
 

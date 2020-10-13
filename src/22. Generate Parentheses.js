@@ -3,7 +3,7 @@
  * @return {string[]}
  */
 
-function generateParenthesis(n) {
+export function generateParenthesis(n) {
   let result = []
   collect(n, n, '')
   return result

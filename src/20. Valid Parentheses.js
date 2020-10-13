@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 
-function isValid(s) {
+export function isValid(s) {
   const match = {
     ')': '(',
     '}': '{',

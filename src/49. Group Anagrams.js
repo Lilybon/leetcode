@@ -3,7 +3,7 @@
  * @return {string[][]}
  */
 
-function groupAnagrams(strs) {
+export function groupAnagrams(strs) {
   let dict = new Map()
   strs.forEach((str) => {
     const key = str.split('').sort().join()

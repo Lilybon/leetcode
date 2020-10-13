@@ -4,7 +4,7 @@
  * @return {number}
  */
 
-function removeElement(nums, val) {
+export function removeElement(nums, val) {
   if (nums.length === 0) return 0
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] === val) {

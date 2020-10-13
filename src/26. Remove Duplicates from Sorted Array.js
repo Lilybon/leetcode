@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-function removeDuplicates(nums) {
+export function removeDuplicates(nums) {
   if (nums.length === 0) return 0
   let i = 0
   for (let j = 0; j < nums.length; j++) {

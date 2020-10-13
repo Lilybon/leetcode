@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 
-function isValidSudoku(board) {
+export function isValidSudoku(board) {
   let row = new Array(9),
     col = new Array(9),
     box = new Array(9)
