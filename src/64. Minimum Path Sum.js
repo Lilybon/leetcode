@@ -5,7 +5,7 @@
 
 // pure function
 /*
-function minPathSum (grid) {
+export function minPathSum (grid) {
   let m = grid.length
   if (!m) return 0
   let n = grid[0].length
@@ -25,7 +25,7 @@ function minPathSum (grid) {
  */
 
 // non-pure function (great runtime and memory usage but mutate grid)
-function minPathSum(grid) {
+export function minPathSum(grid) {
   let m = grid.length
   if (!m) return 0
   let n = grid[0].length

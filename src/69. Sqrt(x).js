@@ -3,6 +3,6 @@
  * @return {number}
  */
 
-function mySqrt(x) {
+export function mySqrt(x) {
   return Math.floor(Math.sqrt(x))
 }

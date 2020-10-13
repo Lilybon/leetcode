@@ -3,13 +3,13 @@
  * @return {number[][]}
  */
 
-function generateMatrix(n) {
+export function generateMatrix(n) {
   let i = 0,
     j = 0,
     value = 1,
     matrix = new Array(n).fill(0).map(() => new Array(n).fill(0)),
-    direction = 'right'
-  block = 0
+    direction = 'right',
+    block = 0
   while (value <= n ** 2) {
     matrix[i][j] = value
     switch (direction) {

@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-function maxSubArray(nums) {
+export function maxSubArray(nums) {
   let curMax = 0,
     sumMax = -Number.MAX_VALUE
   for (let val of nums) {

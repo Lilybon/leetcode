@@ -5,7 +5,7 @@
  */
 
 /*
-function uniquePaths (m, n) {
+export function uniquePaths (m, n) {
   if (!m || !n) return 1
   let dp = []
   for (let i = 0; i < m; i++) {
@@ -21,7 +21,7 @@ function uniquePaths (m, n) {
 }
 */
 
-function uniquePaths(m, n) {
+export function uniquePaths(m, n) {
   let result = 1
   for (let i = n; i <= m + n - 2; i++) {
     result *= i
