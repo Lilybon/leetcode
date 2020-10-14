@@ -3,7 +3,7 @@
  * @return {string}
  */
 
-function convertToTitle(n) {
+export function convertToTitle(n) {
   // String.fromCharCode(65) = 'A'， String.fromCharCode(66) = 'B' ..... String.fromCharCode(90) = 'Z'
   let columnTitle = ''
   while (n > 0) {

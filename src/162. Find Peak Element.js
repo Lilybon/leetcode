@@ -5,7 +5,7 @@
 
 // 1. Recursive Binary Search
 /*
-function findPeakElement (nums) {
+export function findPeakElement (nums) {
   return helper(0, nums.length - 1)
   function helper (left, right) {
     if (left === right) return left
@@ -18,7 +18,7 @@ function findPeakElement (nums) {
  */
 
 // 2. Iterative Binary Search
-function findPeakElement(nums) {
+export function findPeakElement(nums) {
   let left = 0,
     right = nums.length - 1
   while (left !== right) {

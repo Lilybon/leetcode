@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-function numIslands(grid) {
+export function numIslands(grid) {
   let count = 0
   const m = grid.length
   if (!m) return count

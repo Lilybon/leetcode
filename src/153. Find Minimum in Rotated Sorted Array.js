@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-function findMin(nums) {
+export function findMin(nums) {
   let left = 0,
     right = nums.length - 1
   while (left < right) {

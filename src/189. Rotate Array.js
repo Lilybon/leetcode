@@ -4,7 +4,7 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 
-function rotate(nums, k) {
+export function rotate(nums, k) {
   while (k > 0) {
     let last_item = nums.pop()
     nums.unshift(last_item)

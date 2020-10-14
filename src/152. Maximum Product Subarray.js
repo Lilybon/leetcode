@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-function maxProduct(nums) {
+export function maxProduct(nums) {
   let max = 1,
     min = 1,
     res = -Number.MAX_VALUE
