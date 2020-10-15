@@ -4,7 +4,7 @@
  * @return {boolean}
  */
 
-function isAnagram(s, t) {
+export function isAnagram(s, t) {
   const sortStr = (str) => str.split('').sort().join('')
   if (s.length != t.length) return false
   const sort_s = sortStr(s)

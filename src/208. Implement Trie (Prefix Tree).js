@@ -1,4 +1,4 @@
-class Trie {
+export class Trie {
   /**
    * Initialize your data structure here.
    */

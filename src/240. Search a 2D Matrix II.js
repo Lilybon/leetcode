@@ -4,7 +4,7 @@
  * @return {boolean}
  */
 
-function searchMatrix(matrix, target) {
+export function searchMatrix(matrix, target) {
   const m = matrix.length
   if (!m) return false
   const n = matrix[0].length

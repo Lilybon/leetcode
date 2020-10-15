@@ -4,7 +4,7 @@
  * @return {boolean}
  */
 
-function canFinish(numCourses, prerequisites) {
+export function canFinish(numCourses, prerequisites) {
   let visited = new Set()
   let visiting = new Set()
   let adj = [...Array(numCourses)].map((_) => [])
