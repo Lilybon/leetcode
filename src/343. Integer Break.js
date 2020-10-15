@@ -4,7 +4,7 @@
  */
 
 /*
-function integerBreak (n) {
+export function integerBreak (n) {
   let dp = Array(n + 1).fill(1)
   for (let i = 3; i <= n; i++) {
     for (let j = 1; j < i; j++) {
@@ -16,7 +16,7 @@ function integerBreak (n) {
 }
  */
 
-function integerBreak(n) {
+export function integerBreak(n) {
   if (n === 2 || n === 3) return n - 1
   let mod = n % 3
   n -= mod

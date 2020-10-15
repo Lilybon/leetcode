@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-function findDuplicate(nums) {
+export function findDuplicate(nums) {
   if (nums.length > 1) {
     let slow = nums[0]
     let fast = nums[slow]

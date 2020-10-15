@@ -6,8 +6,8 @@
 
 export function rotate(nums, k) {
   while (k > 0) {
-    let last_item = nums.pop()
-    nums.unshift(last_item)
+    let lastItem = nums.pop()
+    nums.unshift(lastItem)
     k--
   }
 }

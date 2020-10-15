@@ -15,8 +15,8 @@
 function mergeTrees(t1, t2) {
   if (t1 === null) return t2
   if (t2 === null) return t1
-  const new_node = new TreeNode(t1.val + t2.val)
-  new_node.left = mergeTrees(t1.left, t2.left)
-  new_node.right = mergeTrees(t1.right, t2.right)
-  return new_node
+  const newNode = new TreeNode(t1.val + t2.val)
+  newNode.left = mergeTrees(t1.left, t2.left)
+  newNode.right = mergeTrees(t1.right, t2.right)
+  return newNode
 }

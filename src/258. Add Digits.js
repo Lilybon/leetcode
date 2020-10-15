@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-function addDigits(num) {
+export function addDigits(num) {
   if (num < 10) return num
   let digits = num
   while (digits >= 10) {

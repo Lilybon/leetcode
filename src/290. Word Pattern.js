@@ -5,7 +5,7 @@
  */
 
 /*
-function wordPattern (pattern, s) {
+export function wordPattern (pattern, s) {
   let wordList = s.split(' ')
   const n = pattern.length
   if (n !==  wordList.length) return false
@@ -24,7 +24,7 @@ function wordPattern (pattern, s) {
 }
  */
 
-function wordPattern(pattern, s) {
+export function wordPattern(pattern, s) {
   let wordList = s.split(' ')
   const n = pattern.length
   if (n !== wordList.length) return false
