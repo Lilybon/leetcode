@@ -4,6 +4,6 @@
  * @return {number}
  */
 
-function getSum(a, b) {
+export function getSum(a, b) {
   return a + b
 }

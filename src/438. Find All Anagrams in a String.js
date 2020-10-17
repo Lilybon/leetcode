@@ -6,7 +6,7 @@
 
 // 1. Brute Force
 /*
-function findAnagrams (s, p) {
+export function findAnagrams (s, p) {
   const result = []
   const dict = p.split('').reduce((acc, char) => {
     acc[char] = acc[char] ? acc[char] + 1 : 1
@@ -29,7 +29,7 @@ function findAnagrams (s, p) {
  */
 
 // 2. Sliding Window
-function findAnagrams(s, p) {
+export function findAnagrams(s, p) {
   const results = []
   let dict = {}
   let uniqueChars = 0

@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-function maxRotateFunction(A) {
+export function maxRotateFunction(A) {
   const n = A.length
   if (n === 0) return 0
   let sum = 0

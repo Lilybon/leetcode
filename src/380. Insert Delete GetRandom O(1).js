@@ -1,4 +1,4 @@
-class RandomizedSet {
+export class RandomizedSet {
   /**
    * Initialize your data structure here.
    */

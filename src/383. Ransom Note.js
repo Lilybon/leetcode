@@ -4,7 +4,7 @@
  * @return {boolean}
  */
 
-function canConstruct(ransomNote, magazine) {
+export function canConstruct(ransomNote, magazine) {
   let hash = {}
   for (let i = 0; i < magazine.length; i++) {
     let alphabet = magazine[i]

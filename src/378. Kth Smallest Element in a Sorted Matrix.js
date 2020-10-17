@@ -5,7 +5,7 @@
  */
 
 /*
- function kthSmallest (matrix, k) {
+ export function kthSmallest (matrix, k) {
   const n = matrix.length
   let pointer = new Array(n).fill(0)
   let min
@@ -27,7 +27,7 @@
 }
   */
 
-function kthSmallest(matrix, k) {
+export function kthSmallest(matrix, k) {
   const n = matrix.length
   let start = matrix[0][0],
     end = matrix[n - 1][n - 1]

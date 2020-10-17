@@ -1,4 +1,4 @@
-class Solution {
+export class Solution {
   /**
    * @param {number[]} nums
    */
@@ -16,7 +16,7 @@ class Solution {
       if (this.nums[idx] === target) {
         count++
         let fit = Math.floor(Math.random() * count)
-        if (fit === 0) result = idx
+        if (fit === 0) result = +idx
       }
     }
     return result

@@ -1,4 +1,4 @@
-class Solution {
+export class Solution {
   /**
    * @param {number[]} nums
    */
