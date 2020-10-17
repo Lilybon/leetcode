@@ -6,7 +6,7 @@
 
 // 1. DFS
 /*
-function findTargetSumWays(nums, S) {
+export function findTargetSumWays(nums, S) {
   return dfs(0, 0)
   function dfs (idx, sum) {
     if (idx === nums.length) return sum === S ? 1 : 0
@@ -17,7 +17,7 @@ function findTargetSumWays(nums, S) {
 
 // 2. DFS + memorization
 /*
-function findTargetSumWays(nums, S) {
+export function findTargetSumWays(nums, S) {
   let memo = new Array(nums.length)
     .fill(0)
     .map(() => new Map())
@@ -34,7 +34,7 @@ function findTargetSumWays(nums, S) {
  */
 
 // 3. DP
-function findTargetSumWays(nums, S) {
+export function findTargetSumWays(nums, S) {
   const sum = nums.reduce((a, b) => a + b, 0)
   if (sum < S || (sum + S) % 2 === 1) return 0
   const total = (sum + S) / 2

@@ -3,7 +3,7 @@
  * @return {number[]}
  */
 
-function findDuplicates(nums) {
+export function findDuplicates(nums) {
   let hash = {}
   let duplicates = []
   for (let i = 0; i < nums.length; i++) {

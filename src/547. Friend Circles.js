@@ -5,7 +5,7 @@
 
 // Union Find
 /*
-function findCircleNum (M) {
+export function findCircleNum (M) {
   const f = Array.from(Array(M.length), (_, idx) => idx)
   for (let i = 0; i < M.length; i++) {
     for (let j = i + 1; j < M.length; j++) {
@@ -33,7 +33,7 @@ function merge (f, u, v) {
  */
 
 // DFS
-function findCircleNum(M) {
+export function findCircleNum(M) {
   const visited = new Set()
   let count = 0
   for (let i = 0; i < M.length; i++) {

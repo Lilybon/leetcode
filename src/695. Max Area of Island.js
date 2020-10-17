@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-function maxAreaOfIsland(grid) {
+export function maxAreaOfIsland(grid) {
   let max = 0,
     tmpMax = 0
   for (let i = 0; i < grid.length; i++) {

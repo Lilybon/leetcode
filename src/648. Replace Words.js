@@ -4,7 +4,7 @@
  * @return {string}
  */
 
-function replaceWords(dictionary, sentence) {
+export function replaceWords(dictionary, sentence) {
   const trie = dictionary.reduce((map, word) => buildMap(map, word), {})
   return sentence
     .split(' ')

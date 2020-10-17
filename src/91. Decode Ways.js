@@ -18,7 +18,7 @@ export function numDecodings(s) {
     // CASE: [i - 2]之原有組合 + 雙數字組成數字(J~Z),組成可能之[i]組合結果
     // 註: 初次計算到之dp[0] = 0沒有意義,但要設置初始組合數1
     if (n2 !== '0' && combineN <= 26) dp[i] += Math.max(dp[i - 2], 1)
-    if (dp[i] === 0) return 0 //"00"或"30","40" ...等狀況出現會無法decode出任何結果,回傳0
+    if (dp[i] === 0) return 0 //'00'或'30','40' ...等狀況出現會無法decode出任何結果,回傳0
   }
 
   return dp[s.length]

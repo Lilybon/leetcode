@@ -4,7 +4,7 @@
  */
 
 /*
-function findUnsortedSubarray (nums) {
+export function findUnsortedSubarray (nums) {
   const n = nums.length
   const clone = [ ...nums ].sort((a, b) => a - b)
   let i = 0,
@@ -15,7 +15,7 @@ function findUnsortedSubarray (nums) {
 }
  */
 
-function findUnsortedSubarray(nums) {
+export function findUnsortedSubarray(nums) {
   const n = nums.length
   let start = -1,
     end = -2,
