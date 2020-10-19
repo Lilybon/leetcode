@@ -10,7 +10,7 @@ export function isPerfectSquare(num) {
 }
  */
 
-export function isPerfectSquare (nums) {
+export function isPerfectSquare(nums) {
   for (let i = 1; i <= nums / i; i++) {
     if (i ** 2 === nums) return true
   }
