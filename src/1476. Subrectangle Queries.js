@@ -1,4 +1,4 @@
-class SubrectangleQueries {
+export class SubrectangleQueries {
   /**
    * @param {number[][]} rectangle
    */

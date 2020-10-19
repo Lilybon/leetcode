@@ -5,7 +5,7 @@
 
 // Brute Force
 /*
-function numTeams (rating) {
+export function numTeams (rating) {
   let count = 0
   for (let i = 0; i < rating.length; i++) {
     for (let j = i + 1; j < rating.length; j++) {
@@ -19,7 +19,7 @@ function numTeams (rating) {
 }
  */
 
-function numTeams(rating) {
+export function numTeams(rating) {
   const n = rating.length
   let count = 0
   for (let j = 0; j < n; j++) {

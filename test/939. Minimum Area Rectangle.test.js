@@ -1,7 +1,7 @@
 import { minAreaRect } from '../src/939. Minimum Area Rectangle'
 
 describe('minAreaRect', () => {
-  test('', () => {
+  test('it determines the minimum area of a rectangle formed from a set of points, with sides parallel to the x and y axes', () => {
     const points1 = [
       [1, 1],
       [1, 3],

@@ -3,7 +3,7 @@
  * @return {number}
  */
 
-function numSplits(s) {
+export function numSplits(s) {
   let count = 0,
     leftMap = new Map(),
     rightMap = new Map(),

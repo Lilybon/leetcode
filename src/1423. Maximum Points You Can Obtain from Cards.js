@@ -4,7 +4,7 @@
  * @return {number}
  */
 
-function maxScore(cardPoints, k) {
+export function maxScore(cardPoints, k) {
   const n = cardPoints.length
   let maxSum = 0
   for (let i = 0; i < k; i++) {

@@ -4,7 +4,7 @@
  * @return {boolean}
  */
 
-function carPooling(trips, capacity) {
+export function carPooling(trips, capacity) {
   let MAX_STOP = 1000
   let stops = Array(MAX_STOP).fill(0)
   for (let i = 0; i < trips.length; i++) {

@@ -4,7 +4,7 @@
  * @return {number}
  */
 
-function maxVowels(s, k) {
+export function maxVowels(s, k) {
   const vowel = {
     a: true,
     e: true,
