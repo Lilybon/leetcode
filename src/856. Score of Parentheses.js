@@ -5,7 +5,7 @@
 
 // 1. Stack
 /*
-function scoreOfParentheses (S) {
+export function scoreOfParentheses (S) {
   const stack = []
   stack.push(0) // The score of current frame
   for (let char of S) {
@@ -21,7 +21,7 @@ function scoreOfParentheses (S) {
  */
 
 // 2. Count Cores
-function scoreOfParentheses(S) {
+export function scoreOfParentheses(S) {
   let count = 0,
     balance = 0
   for (let i = 0; i < S.length; i++) {

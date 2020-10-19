@@ -6,7 +6,7 @@
  */
 
 // Bellman-Ford
-function networkDelayTime(times, N, K) {
+export function networkDelayTime(times, N, K) {
   const costs = Array(N + 1).fill(Infinity)
   costs[0] = 0
   costs[K] = 0

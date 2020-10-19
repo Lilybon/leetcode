@@ -3,7 +3,7 @@
  * @return {number[][]}
  */
 
-function allPathsSourceTarget(graph) {
+export function allPathsSourceTarget(graph) {
   const result = [],
     path = [0],
     n = graph.length

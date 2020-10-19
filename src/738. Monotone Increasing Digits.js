@@ -5,7 +5,7 @@
 
 // Greedy
 /*
-function monotoneIncreasingDigits (N) {
+export function monotoneIncreasingDigits (N) {
   let S = String(N)
   let max = ''
   search:
@@ -23,7 +23,7 @@ function monotoneIncreasingDigits (N) {
  */
 
 // Truncate After Cliff
-function monotoneIncreasingDigits(N) {
+export function monotoneIncreasingDigits(N) {
   let S = String(N).split('')
   let i = 1
   while (i < S.length && S[i - 1] <= S[i]) i++

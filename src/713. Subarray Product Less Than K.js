@@ -4,7 +4,7 @@
  * @return {number}
  */
 
-function numSubarrayProductLessThanK(nums, k) {
+export function numSubarrayProductLessThanK(nums, k) {
   let count = 0,
     prod = 1,
     left = 0
