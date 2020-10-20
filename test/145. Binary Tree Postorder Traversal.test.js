@@ -2,7 +2,7 @@ import { TreeNode } from './helpers/TreeNode'
 import { postorderTraversal } from '../src/145. Binary Tree Postorder Traversal'
 
 describe('postorderTraversal', () => {
-  test('it returns the single one from array of integers which every element appears twice except one', () => {
+  test("it return the postorder traversal of its nodes' values", () => {
     const tree1 = new TreeNode(1)
     tree1.right = new TreeNode(2)
     tree1.right.left = new TreeNode(3)
