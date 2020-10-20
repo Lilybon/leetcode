@@ -5,7 +5,7 @@
   "scripts": {
     "format": "prettier --write \"**/*.js\"",
     "lint:fix": "eslint \"**/*.js\" --fix",
-    "test": "jest"
+    "test": "jest --env=node --onlyChanged"
   },
   "repository": "https://github.com/Lilybon/leetcode.git",
   "author": "Lilybon <zebra10029@gmail.com>",
