@@ -11,9 +11,9 @@
  * @return {ListNode}
  */
 
-export function middleNode (head) {
+export function middleNode(head) {
   let slow = head,
-      fast = head
+    fast = head
   while (fast && fast.next) {
     slow = slow.next
     fast = fast.next.next
