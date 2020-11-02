@@ -30,10 +30,10 @@ class NestedIterator {
    * @constructor
    * @param {NestedInteger[]} nestedList
    */
-  constructor (nestedList) {
+  constructor(nestedList) {
     this.queue = []
     this.index = 0
-    const _collectFlatten = nests => {
+    const _collectFlatten = (nests) => {
       if (!nests) return
       for (let nest of nests) {
         if (nest.isInteger()) this.queue.push(nest.getInteger())
@@ -46,14 +46,14 @@ class NestedIterator {
    * @this NestedIterator
    * @returns {boolean}
    */
-  hasNext () {
+  hasNext() {
     return this.queue.length
   }
   /**
    * @this NestedIterator
    * @returns {integer}
    */
-  next () {
+  next() {
     return this.queue.shift()
   }
 }
@@ -62,4 +62,4 @@ class NestedIterator {
  * Your NestedIterator will be called like this:
  * var i = new NestedIterator(nestedList), a = [];
  * while (i.hasNext()) a.push(i.next());
-*/
+ */
