@@ -15,7 +15,7 @@ export function combinationSum(candidates, target) {
     for (let j = i; j < candidates.length; j++) {
       row.push(candidates[j])
       dfs(j, sum + candidates[j])
-      row.pop(candidates[j])
+      row.pop()
     }
   }
 }
