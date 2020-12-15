@@ -9,12 +9,12 @@ export function combinationSum(candidates, target) {
     row = []
   dfs()
   return result
-  function dfs(i = 0, sum = 0) {
+  function dfs(start = 0, sum = 0) {
     if (sum === target) result.push([...row])
     if (sum > target) return
-    for (let j = i; j < candidates.length; j++) {
-      row.push(candidates[j])
-      dfs(j, sum + candidates[j])
+    for (let i = start; i < candidates.length; i++) {
+      row.push(candidates[i])
+      dfs(i, sum + candidates[i])
       row.pop()
     }
   }
