@@ -21,7 +21,7 @@ export function combine(n, k) {
       row.push(i)
       dfs(i + 1)
       visited[i] = 0
-      row.pop(i)
+      row.pop()
     }
   }
 }
