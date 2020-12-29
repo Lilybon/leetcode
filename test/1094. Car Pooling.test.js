@@ -1,7 +1,7 @@
 import { carPooling } from '../src/1094. Car Pooling'
 
 describe('carPooling', () => {
-  test('', () => {
+  test('it returns true if and only if it is possible to pick up and drop off all passengers for all the given trips', () => {
     const trip1 = [
       [2, 1, 5],
       [3, 3, 7],
