@@ -13,12 +13,12 @@ export function romanToInt(s) {
     D: 500,
     M: 1000,
   }
-  let results = 0,
+  let result = 0,
     nextValue
   for (let i = s.length - 1; i >= 0; i--) {
     let value = map[s[i]]
-    results += (value < nextValue ? -1 : 1) * value
+    result += (value < nextValue ? -1 : 1) * value
     nextValue = value
   }
-  return results
+  return result
 }
