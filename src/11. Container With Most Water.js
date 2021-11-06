@@ -8,7 +8,7 @@ export function maxArea(height) {
     left = 0,
     right = height.length - 1
   while (left < right) {
-    let tmpMax = Math.min(height[left], height[right]) * (right - left)
+    const tmpMax = Math.min(height[left], height[right]) * (right - left)
     max = Math.max(max, tmpMax)
     if (height[left] > height[right]) right--
     else left++

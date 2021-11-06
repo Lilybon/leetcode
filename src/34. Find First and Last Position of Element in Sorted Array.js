@@ -12,7 +12,7 @@ function searchFirst(nums, target) {
   let left = 0,
     right = nums.length
   while (left < right) {
-    let mid = Math.floor((left + right - 1) / 2)
+    let mid = Math.floor((left + right) / 2)
     if (nums[mid] >= target) right = mid
     else left = mid + 1
   }
@@ -24,7 +24,7 @@ function searchLast(nums, target) {
   let left = 0,
     right = nums.length
   while (left < right) {
-    let mid = Math.floor((left + right - 1) / 2)
+    let mid = Math.floor((left + right) / 2)
     if (nums[mid] > target) right = mid
     else left = mid + 1
   }

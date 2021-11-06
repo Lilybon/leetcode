@@ -10,7 +10,7 @@ export function addBinary(a, b) {
     bDigit = b.length - 1,
     overflow = 0
   while (aDigit >= 0 || bDigit >= 0) {
-    let sum = overflow + Number(a[aDigit] || 0) + Number(b[bDigit] || 0)
+    const sum = overflow + Number(a[aDigit] || 0) + Number(b[bDigit] || 0)
     result = String(sum % 2) + result
     overflow = Math.floor(sum / 2)
     aDigit--

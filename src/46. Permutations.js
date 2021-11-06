@@ -4,22 +4,22 @@
  */
 
 export function permute(nums) {
-  const result = new Array()
-  const visited = new Uint8Array(nums.length)
-  const row = new Array()
-  dfs()
-  return result
-  function dfs() {
+  const results = Array(),
+    visited = Array(nums.length),
+    row = Array()
+  backtracking()
+  return results
+  function backtracking() {
     if (row.length === nums.length) {
-      result.push([...row])
+      results.push([...row])
       return
     }
     for (let i = 0; i < nums.length; i++) {
       if (visited[i]) continue
-      visited[i] = 1
+      visited[i] = true
       row.push(nums[i])
-      dfs()
-      visited[i] = 0
+      backtracking()
+      visited[i] = false
       row.pop()
     }
   }

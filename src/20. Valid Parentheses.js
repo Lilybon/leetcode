@@ -11,11 +11,11 @@ export function isValid(s) {
   }
   const left = Object.values(match)
   const right = Object.keys(match)
-  let stack = []
+  const stack = []
   for (let char of s) {
     if (left.includes(char)) stack.push(char)
     if (right.includes(char)) {
-      let contrastChar = stack.pop()
+      const contrastChar = stack.pop()
       if (contrastChar !== match[char]) return false
     }
   }

@@ -17,9 +17,9 @@ export function letterCombinations(digits) {
       9: ['w', 'x', 'y', 'z'],
     }
   let combination = ''
-  dfs(0)
+  backtracking(0)
   return results
-  function dfs(start) {
+  function backtracking(start) {
     if (!digits.length) return
     if (combination.length === digits.length) {
       results.push(combination)
@@ -28,7 +28,7 @@ export function letterCombinations(digits) {
     for (let char of map[digits[start]]) {
       let backup = combination
       combination += char
-      dfs(start + 1)
+      backtracking(start + 1)
       combination = backup
     }
   }

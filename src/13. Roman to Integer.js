@@ -16,7 +16,7 @@ export function romanToInt(s) {
   let result = 0,
     nextValue
   for (let i = s.length - 1; i >= 0; i--) {
-    let value = map[s[i]]
+    const value = map[s[i]]
     result += (value < nextValue ? -1 : 1) * value
     nextValue = value
   }

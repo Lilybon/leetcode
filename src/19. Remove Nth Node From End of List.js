@@ -13,8 +13,7 @@
  */
 
 function removeNthFromEnd(head, n) {
-  let dummyHead = new ListNode(null)
-  dummyHead.next = head
+  const dummyHead = new ListNode(null, head)
   let current = head,
     len = 0
   while (current) {
@@ -27,7 +26,7 @@ function removeNthFromEnd(head, n) {
     tgt--
     current = current.next
   }
-  let delNode = current.next
+  const delNode = current.next
   current.next = delNode.next
   delNode.next = null
   return dummyHead.next

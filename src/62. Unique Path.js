@@ -7,10 +7,7 @@
 /*
 export function uniquePaths (m, n) {
   if (!m || !n) return 1
-  let dp = []
-  for (let i = 0; i < m; i++) {
-    dp[i] = new Array(n)
-  }
+  const dp = Array.from(Array(m), () => Array(n))
   for (let i = 0; i < m; i++) {
     for (let j = 0; j < n; j++) {
       if (i === 0 || j === 0) dp[i][j] = 1
@@ -24,8 +21,7 @@ export function uniquePaths (m, n) {
 export function uniquePaths(m, n) {
   let result = 1
   for (let i = n; i <= m + n - 2; i++) {
-    result *= i
-    result /= i - n + 1
+    result *= i / (i - n + 1)
   }
   return result
 }

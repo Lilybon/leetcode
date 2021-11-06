@@ -5,20 +5,21 @@
  */
 
 export function insert(intervals, newInterval) {
-  let result = [],
-    insertIdx = 0,
+  const results = [],
     inserted = [...newInterval]
+  let insertIdx = 0
+
   for (let interval of intervals) {
     if (interval[1] < newInterval[0]) {
-      result.push(interval)
+      results.push(interval)
       insertIdx++
     } else if (interval[0] > newInterval[1]) {
-      result.push(interval)
+      results.push(interval)
     } else {
       inserted[0] = Math.min(inserted[0], interval[0])
       inserted[1] = Math.max(inserted[1], interval[1])
     }
   }
-  result.splice(insertIdx, -1, inserted)
-  return result
+  results.splice(insertIdx, -1, inserted)
+  return results
 }

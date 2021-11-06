@@ -13,19 +13,19 @@
  */
 
 function mergeTwoLists(l1, l2) {
-  const dummy = new ListNode(undefined)
-  let cur = dummy
+  const dummyHead = new ListNode(undefined)
+  let current = dummyHead
   while (l1 && l2) {
     if (l1.val > l2.val) {
-      cur.next = l2
+      current.next = l2
       l2 = l2.next
     } else {
-      cur.next = l1
+      current.next = l1
       l1 = l1.next
     }
-    cur = cur.next
+    current = current.next
   }
-  if (l1) cur.next = l1
-  if (l2) cur.next = l2
-  return dummy.next
+  if (l1) current.next = l1
+  if (l2) current.next = l2
+  return dummyHead.next
 }

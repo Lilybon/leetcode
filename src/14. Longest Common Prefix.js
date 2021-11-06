@@ -5,16 +5,15 @@
 
 export function longestCommonPrefix(strs) {
   if (!strs.length) return ''
-  let compared = strs[0],
-    len = compared.length
-  for (let i = 1; i < strs.length; i++) {
-    let str = strs[i],
-      tmpLen = 0
-    for (let j = 0; j < Math.min(len, str.length); j++) {
+  const compared = strs[0]
+  let maxLen = compared.length
+  for (let str of strs) {
+    let tmpMaxLen = 0
+    for (let j = 0; j < Math.min(maxLen, str.length); j++) {
       if (compared[j] !== str[j]) break
-      tmpLen++
+      tmpMaxLen++
     }
-    len = Math.min(len, tmpLen)
+    maxLen = Math.min(maxLen, tmpMaxLen)
   }
-  return compared.slice(0, len)
+  return compared.slice(0, maxLen)
 }

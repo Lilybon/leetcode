@@ -4,21 +4,21 @@
  */
 
 export function threeSum(nums) {
-  const n = nums.length
-  let result = []
+  const n = nums.length,
+    results = []
   nums.sort((a, b) => a - b)
   for (let i = 0; i < n - 2; i++) {
-    let a = nums[i]
+    const a = nums[i]
     if (a > 0) break
-    if (a === nums[i - 1]) continue
-    let start = i + 1
-    let end = n - 1
+    if (i > 0 && a === nums[i - 1]) continue
+    let start = i + 1,
+      end = n - 1
     while (start < end) {
-      let b = nums[start]
-      let c = nums[end]
-      let sum = a + b + c
+      const b = nums[start],
+        c = nums[end],
+        sum = a + b + c
       if (sum === 0) {
-        result.push([a, b, c])
+        results.push([a, b, c])
         while (start < end && nums[start] === nums[start + 1]) start++
         while (start < end && nums[end] === nums[end - 1]) end--
         start++
@@ -30,5 +30,5 @@ export function threeSum(nums) {
       }
     }
   }
-  return result
+  return results
 }

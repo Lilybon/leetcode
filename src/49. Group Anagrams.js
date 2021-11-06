@@ -4,7 +4,7 @@
  */
 
 export function groupAnagrams(strs) {
-  let dict = new Map()
+  const dict = new Map()
   strs.forEach((str) => {
     const key = str.split('').sort().join()
     if (!dict.get(key)) dict.set(key, [])

@@ -6,11 +6,11 @@
 // pure function
 /*
 export function minPathSum (grid) {
-  let m = grid.length
+  const m = grid.length
   if (!m) return 0
-  let n = grid[0].length
+  const n = grid[0].length
   if (!n) return 0
-  let dp = Array(m + 1).fill().map(_ => Array(n + 1))
+  const dp = Array.from(Array(m + 1), () => Array(n + 1))
   for (let i = 2; i <= m; i++) dp[i][0] = Infinity
   for (let j = 2; j <= n; j++)  dp[0][j] = Infinity
   dp[1][0] = 0
@@ -26,9 +26,9 @@ export function minPathSum (grid) {
 
 // non-pure function (great runtime and memory usage but mutate grid)
 export function minPathSum(grid) {
-  let m = grid.length
+  const m = grid.length
   if (!m) return 0
-  let n = grid[0].length
+  const n = grid[0].length
   if (!n) return 0
   for (let i = 0; i < m; i++) {
     for (let j = 0; j < n; j++) {

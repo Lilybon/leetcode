@@ -4,11 +4,10 @@
  */
 
 export function spiralOrder(matrix) {
-  let traverse = []
-  const m = matrix.length
-  if (!m) return traverse
-  const n = matrix[0].length
-  if (!n) return traverse
+  const traverse = [],
+    m = matrix.length,
+    n = matrix[0].length
+  if (!m || !n) return traverse
   let count = 1,
     i = 0,
     j = 0,
