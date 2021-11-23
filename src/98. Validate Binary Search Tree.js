@@ -6,12 +6,12 @@
  * }
  */
 
-function isValidBST_Recursive(node, min, max) {
+function isValidBSTRecursive(node, min, max) {
   if (node === null) return true
   if (node.val >= max || node.val <= min) return false
   return (
-    isValidBST_Recursive(node.right, node.val, max) &&
-    isValidBST_Recursive(node.left, min, node.val)
+    isValidBSTRecursive(node.right, node.val, max) &&
+    isValidBSTRecursive(node.left, min, node.val)
   )
 }
 
@@ -21,5 +21,5 @@ function isValidBST_Recursive(node, min, max) {
  */
 
 function isValidBST(root) {
-  return isValidBST_Recursive(root, -Infinity, Infinity)
+  return isValidBSTRecursive(root, -Infinity, Infinity)
 }

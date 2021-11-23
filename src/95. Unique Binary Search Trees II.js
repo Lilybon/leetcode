@@ -17,10 +17,10 @@ function generateTrees(n) {
    * Assuming Tree(n) returns all possible BST combinations,
    * we can infer that
    * Tree(n) =
-   * Tree(1) * Tree(n - 1) +
-   * Tree(2) * Tree(n - 2) +
+   * Tree(0) * Tree(n - 1) +
+   * Tree(1) * Tree(n - 2) +
    * ... +
-   * Tree(n - 1) * Tree(1)
+   * Tree(n - 1) * Tree(0)
    */
   return n === 0 ? [] : collectTrees(1, n)
   function collectTrees(left, right) {

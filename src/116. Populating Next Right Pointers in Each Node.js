@@ -24,8 +24,8 @@ export function connect (root) {
     for (let node of queue) {
       if (node.left) children.push(node.left)
       if (node.right) children.push(node.right)
+      if (prev) prev.next = node
       prev = node
-      if (prev) node.next = prev
     }
     prev.next = null
     queue = children

@@ -13,7 +13,7 @@
  */
 
 function levelOrderBottom(root) {
-  let traverse = []
+  const traverse = []
   dfs(root, 0)
   return traverse.reverse()
   function dfs(node, level) {

@@ -32,23 +32,21 @@ function zigzagLevelOrder (root) {
 
 // BFS
 function zigzagLevelOrder(root) {
-  let traversal = []
+  const traversal = []
   if (!root) return traversal
-  let queue = []
+  const queue = [[root]]
   let level = 0
-  queue.push([root])
   while (queue.length) {
-    let currNodes = queue.shift()
-    if (!currNodes.length) break
-    let currVals = currNodes.map((node) => node.val)
-    traversal.push(level % 2 === 0 ? currVals : currVals.reverse())
-    let nextNodes = currNodes.reduce((list, node) => {
+    const nodes = queue.shift()
+    const vals = nodes.map((node) => node.val)
+    traversal.push(level % 2 === 0 ? vals : vals.reverse())
+    const nextNodes = nodes.reduce((list, node) => {
       if (node.left) list.push(node.left)
       if (node.right) list.push(node.right)
       return list
     }, [])
     level++
-    queue.push(nextNodes)
+    if (nextNodes.length) queue.push(nextNodes)
   }
   return traversal
 }

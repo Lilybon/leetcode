@@ -17,8 +17,8 @@
 function minDepth (root) {
   if (!root) return 0
   if (!root.left && !root.right) return 1
-  let l = root.left ? minDepth(root.left) : Infinity
-  let r = root.right ? minDepth(root.right) : Infinity
+  const l = root.left ? minDepth(root.left) : Infinity
+  const r = root.right ? minDepth(root.right) : Infinity
   return Math.min(l, r) + 1
 }
  */
@@ -29,8 +29,8 @@ function minDepth(root) {
   let min = 1
   const queue = [[root]]
   while (queue.length) {
-    let currents = queue.pop()
-    let nexts = []
+    const currents = queue.pop()
+    const nexts = []
     for (let node of currents) {
       if (!node.left && !node.right) return min
       if (node.left) nexts.push(node.left)

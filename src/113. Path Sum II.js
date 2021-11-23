@@ -14,7 +14,7 @@
  */
 
 function pathSum(root, sum) {
-  let paths = []
+  const paths = []
   helper(root, sum, [])
   return paths
   function helper(node, tmpSum, path) {
