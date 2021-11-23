@@ -28,6 +28,20 @@
  */
 
 function flatten(root) {
+  if (!root) return
+  flatten(root.left)
+  flatten(root.right)
+  const child = root.right
+  root.right = root.left
+  root.left = null
+  while (root.right) {
+    root = root.right
+  }
+  root.right = child
+}
+
+/*
+function flatten(root) {
   let current = root
   while (current) {
     if (current.left) {
@@ -42,3 +56,4 @@ function flatten(root) {
     current = current.right
   }
 }
+ */
