@@ -13,14 +13,17 @@
  */
 
 export function isBalanced(root) {
-  let result = true
+  let isValid = true
   postorder(root)
   return result
   function postorder(node) {
-    if (!node) return 0
+    if (!node || !isValid) return 0
     const leftHeight = postorder(node.left)
     const rightHeight = postorder(node.right)
-    if (Math.abs(leftHeight - rightHeight) > 1) result = false
+    if (Math.abs(leftHeight - rightHeight) > 1) {
+      isValid = false
+      return 0
+    }
     return 1 + Math.max(leftHeight, rightHeight)
   }
 }
