@@ -4,7 +4,7 @@
  */
 
 export function sortColors(n) {
-  let count = [0, 0, 0]
+  const count = [0, 0, 0]
   n.forEach((o) => {
     count[o] += 1
   })

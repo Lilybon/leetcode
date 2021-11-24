@@ -12,10 +12,10 @@ export function subsetsWithDup(nums) {
   function backtracking(start) {
     results.push([...row])
     for (let i = start; i < _nums.length; i++) {
+      if (i > start && _nums[i] === _nums[i - 1]) continue
       row.push(_nums[i])
       backtracking(i + 1)
       row.pop()
-      while (i + 1 < _nums.length && _nums[i] === _nums[i + 1]) i++
     }
   }
 }

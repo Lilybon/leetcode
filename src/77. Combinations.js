@@ -5,14 +5,14 @@
  */
 
 export function combine(n, k) {
-  const result = new Array()
-  const visited = new Uint8Array(n + 1)
-  const row = new Array()
+  const results = new Array(),
+    visited = new Uint8Array(n + 1),
+    row = new Array()
   dfs()
-  return result
+  return results
   function dfs(start = 1) {
     if (row.length === k) {
-      result.push([...row])
+      results.push([...row])
       return
     }
     for (let i = start; i <= n; i++) {

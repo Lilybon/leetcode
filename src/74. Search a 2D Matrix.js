@@ -26,7 +26,7 @@ export function searchMatrix(matrix, target) {
   const [m, n] = [matrix.length, matrix[0].length]
   let [r, c] = [0, n - 1]
   while (r < m && c >= 0) {
-    let compare = matrix[r][c]
+    const compare = matrix[r][c]
     if (compare === target) return true
     if (compare > target) c--
     else r++

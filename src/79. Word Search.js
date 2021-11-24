@@ -57,9 +57,9 @@ export function exist(board, word) {
       board[x][y] !== word[idx]
     )
       return false
-    let backup = board[x][y]
+    const backup = board[x][y]
     board[x][y] = '@@'
-    let found =
+    const found =
       search(x + 1, y, idx + 1) ||
       search(x - 1, y, idx + 1) ||
       search(x, y + 1, idx + 1) ||

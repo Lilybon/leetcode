@@ -6,8 +6,8 @@
 // O(m + n)space
 /*
 export function setZeroes(matrix) {
-  let columnHasZero = {}
-  let rowHasZero = {}
+  const columnHasZero = {}
+  const rowHasZero = {}
   for (let i = 0; i < matrix.length; i++) {
     for (let j = 0; j < matrix[0].length; j++) {
       if (matrix[i][j] === 0) {
