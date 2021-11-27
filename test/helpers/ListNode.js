@@ -6,8 +6,8 @@ export class ListNode {
 }
 
 export function createLinkList(nums) {
-  let dummyHead = new ListNode(),
-    current = dummyHead
+  const dummyHead = new ListNode()
+  let current = dummyHead
   for (let num of nums) {
     current.next = new ListNode(num)
     current = current.next

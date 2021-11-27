@@ -13,14 +13,14 @@
  */
 
 export function postorderTraversal(root) {
-  let traverse = []
+  const traverse = []
   postorder(root)
   return traverse
 
   function postorder(node) {
     if (!node) return
-    if (node.left) postorder(node.left)
-    if (node.right) postorder(node.right)
+    postorder(node.left)
+    postorder(node.right)
     traverse.push(node.val)
   }
 }

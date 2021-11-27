@@ -1,17 +1,9 @@
-import { TreeNode } from './helpers/TreeNode'
+import { createTree } from './helpers/TreeNode'
 import { lowestCommonAncestor } from '../src/235. Lowest Common Ancestor of a Binary Search Tree'
 
 describe('lowestCommonAncestor', () => {
   test('it finds the lowest common ancestor (LCA) of two given nodes in the BST', () => {
-    const tree = new TreeNode(6)
-    tree.left = new TreeNode(2)
-    tree.right = new TreeNode(8)
-    tree.left.left = new TreeNode(0)
-    tree.left.right = new TreeNode(4)
-    tree.right.left = new TreeNode(7)
-    tree.right.right = new TreeNode(9)
-    tree.left.right.left = new TreeNode(3)
-    tree.left.right.right = new TreeNode(5)
+    const tree = createTree([6, 2, 8, 0, 4, 7, 9, null, null, 3, 5])
 
     const p1 = tree.left,
       q1 = tree.right,

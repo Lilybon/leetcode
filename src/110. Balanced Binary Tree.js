@@ -15,7 +15,7 @@
 export function isBalanced(root) {
   let isValid = true
   postorder(root)
-  return result
+  return isValid
   function postorder(node) {
     if (!node || !isValid) return 0
     const leftHeight = postorder(node.left)
