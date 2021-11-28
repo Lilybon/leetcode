@@ -30,7 +30,7 @@ export function longestConsecutive(nums) {
   for (let num of nums) {
     if (map[num]) continue
     if (!map[num]) map[num] = 1
-    let left = map[num - 1] || 0,
+    const left = map[num - 1] || 0,
       right = map[num + 1] || 0,
       tmpMax = map[num] + left + right
     map[num] = map[num + right] = map[num - left] = tmpMax

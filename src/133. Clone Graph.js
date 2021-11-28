@@ -16,15 +16,12 @@ function cloneGraph(node) {
   const traverse = new Map()
   return clone(node)
   function clone(node) {
-    if (traverse.has(node.val)) {
-      return traverse.get(node.val)
-    } else {
-      const clonedNode = new Node(node.val)
-      traverse.set(node.val, clonedNode)
-      node.neighbors.forEach((neighbor) => {
-        clonedNode.neighbors.push(clone(neighbor))
-      })
-      return clonedNode
-    }
+    if (traverse.has(node.val)) return traverse.get(node.val)
+    const clonedNode = new Node(node.val)
+    traverse.set(node.val, clonedNode)
+    node.neighbors.forEach((neighbor) => {
+      clonedNode.neighbors.push(clone(neighbor))
+    })
+    return clonedNode
   }
 }

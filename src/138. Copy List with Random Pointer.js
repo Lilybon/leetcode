@@ -14,24 +14,22 @@
 
 export function copyRandomList(head) {
   const visited = new Map(),
-    dummyHead = cloneNode(head, visited)
+    cloneHead = cloneNode(head, visited)
   let current = head,
-    dummyCurrent = dummyHead
+    cloneCurrent = cloneHead
   while (current) {
-    dummyCurrent.next = cloneNode(current.next, visited)
-    dummyCurrent.random = cloneNode(current.random, visited)
-    dummyCurrent = dummyCurrent.next
+    cloneCurrent.next = cloneNode(current.next, visited)
+    cloneCurrent.random = cloneNode(current.random, visited)
+    cloneCurrent = cloneCurrent.next
     current = current.next
   }
-  return dummyHead
+  return cloneHead
 }
 
 function cloneNode(node, visited) {
   if (!node) return node
-  else if (visited.has(node)) return visited.get(node)
-  else {
-    let cloned = new Node(node.val)
-    visited.set(node, cloned)
-    return visited.get(node)
-  }
+  if (visited.has(node)) return visited.get(node)
+  const cloned = new Node(node.val)
+  visited.set(node, cloned)
+  return visited.get(node)
 }
