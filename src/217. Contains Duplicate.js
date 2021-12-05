@@ -4,10 +4,10 @@
  */
 
 export function containsDuplicate(nums) {
-  let dict = new Map()
+  const dict = new Set()
   for (let num of nums) {
-    if (dict.get(num)) return true
-    dict.set(num, true)
+    if (dict.has(num)) return true
+    dict.add(num, true)
   }
   return false
 }

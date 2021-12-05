@@ -28,8 +28,8 @@ function invertNode (node) {
 
 function invertTree(root) {
   if (!root) return root
-  let left = root.right
-  let right = root.left
+  const left = root.right
+  const right = root.left
   root.left = invertTree(left)
   root.right = invertTree(right)
   return root

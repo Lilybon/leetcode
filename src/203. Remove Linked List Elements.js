@@ -13,7 +13,7 @@
  */
 
 function removeElements(head, val) {
-  if (head == null) return null
+  if (head === null) return null
 
   // imaginary node which target for:
   // 1.return the node.next
@@ -24,7 +24,7 @@ function removeElements(head, val) {
   let prevNode = node
   let currNode = head
 
-  while (currNode != null) {
+  while (currNode !== null) {
     if (currNode.val === val) prevNode.next = currNode.next
     // trasfer relation
     else prevNode = currNode // do nothing

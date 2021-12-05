@@ -4,8 +4,7 @@
  */
 
 export function countPrimes(n) {
-  if (n < 3) return 0
-  let f = new Uint8Array(n).fill(1)
+  const f = new Uint8Array(n).fill(1)
   f[0] = 0
   f[1] = 0
   for (let i = 2; i <= Math.sqrt(n); i++) {

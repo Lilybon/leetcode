@@ -18,13 +18,13 @@ export function numIslands(grid) {
     }
   }
   return count
+}
 
-  function breakIsland(grid, i, j) {
-    if (i < 0 || i >= m || j < 0 || j >= n || grid[i][j] === '0') return
-    grid[i][j] = '0'
-    breakIsland(grid, i - 1, j)
-    breakIsland(grid, i + 1, j)
-    breakIsland(grid, i, j - 1)
-    breakIsland(grid, i, j + 1)
-  }
+function breakIsland(grid, i, j, m, n) {
+  if (i < 0 || i >= m || j < 0 || j >= n || grid[i][j] === '0') return
+  grid[i][j] = '0'
+  breakIsland(grid, i - 1, j, m, n)
+  breakIsland(grid, i + 1, j, m, n)
+  breakIsland(grid, i, j - 1, m, n)
+  breakIsland(grid, i, j + 1, m, n)
 }
