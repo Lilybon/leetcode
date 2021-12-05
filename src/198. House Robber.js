@@ -3,7 +3,8 @@
  * @return {number}
  */
 
-export function rob(nums) {
+/*
+function rob(nums) {
   const length = nums.length
   if (length === 0) return 0
   if (length === 1) return nums[0]
@@ -18,4 +19,16 @@ export function rob(nums) {
     opt[i] = Math.max(nums[i] + opt[i - 2], opt[i - 1])
   }
   return opt[length - 1]
+}
+ */
+
+export function rob(nums) {
+  let prevMax = 0,
+    currMax = 0
+  for (let val of nums) {
+    let tmp = currMax
+    currMax = Math.max(prevMax + val, currMax)
+    prevMax = tmp
+  }
+  return currMax
 }
