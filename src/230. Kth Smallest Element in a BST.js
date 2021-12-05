@@ -35,12 +35,12 @@ function kthSmallest (root, k) {
 
 // DFS
 function kthSmallest(root, k) {
-  let count = 0
-  let result = null
+  let count = 0,
+    result
   dfs(root)
   return result
   function dfs(node) {
-    if (!node) return
+    if (!node || result !== undefined) return
     dfs(node.left)
     count++
     if (count === k) result = node.val
