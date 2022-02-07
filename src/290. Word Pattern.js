@@ -25,19 +25,18 @@ export function wordPattern (pattern, s) {
  */
 
 export function wordPattern(pattern, s) {
-  let wordList = s.split(' ')
+  const wordList = s.split(' ')
   const n = pattern.length
   if (n !== wordList.length) return false
   const ptw = new Map()
   const wtp = new Map()
   for (let i = 0; i < n; i++) {
-    let p = pattern[i]
-    let w = wordList[i]
+    const p = pattern[i]
+    const w = wordList[i]
     if (!ptw.has(p) && !wtp.get(w)) {
       ptw.set(p, w)
       wtp.set(w, p)
-    }
-    if (ptw.get(p) !== w || wtp.get(w) !== p) return false
+    } else if (ptw.get(p) !== w || wtp.get(w) !== p) return false
   }
   return true
 }

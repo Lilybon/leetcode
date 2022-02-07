@@ -26,9 +26,13 @@ export function gameOfLife(board) {
 }
 
 function setStatus(board, x, y, m, n) {
+  const xMin = Math.max(0, x - 1),
+    xMax = Math.min(m - 1, x + 1),
+    yMin = Math.max(0, y - 1),
+    yMax = Math.min(n - 1, y + 1)
   let liveCount = 0
-  for (let i = Math.max(0, x - 1); i <= Math.min(m - 1, x + 1); i++) {
-    for (let j = Math.max(0, y - 1); j <= Math.min(n - 1, y + 1); j++) {
+  for (let i = xMin; i <= xMax; i++) {
+    for (let j = yMin; j <= yMax; j++) {
       if (i !== x || j !== y) {
         if (board[i][j] === 2) liveCount += 1
         else if (board[i][j] === 3) liveCount += 0

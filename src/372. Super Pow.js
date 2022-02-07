@@ -25,18 +25,20 @@ export function superPow(a, b) {
 }
 
 // Recursive
-// function superPow (a, b) {
-//   let result = 1
-//   for (let digit of b) {
-//     result = pow(result, 10) * pow(a, digit) % mod
-//   }
-//   return result
-// }
+/*
+function superPow (a, b) {
+  let result = 1
+  for (let digit of b) {
+    result = pow(result, 10) * pow(a, digit) % mod
+  }
+  return result
+}
 
-// function pow (x, n) {
-//   if (x === 1 || n === 0) return 1
-//   if (n === 1) return x % mod
-//   return pow(x % mod, Math.floor(n / 2)) *
-//     pow(x % mod, Math.ceil(n / 2)) %
-//     mod
-// }
+function pow (x, n) {
+  if (x === 1 || n === 0) return 1
+  if (n === 1) return x % mod
+  return pow(x % mod, Math.floor(n / 2)) *
+    pow(x % mod, Math.ceil(n / 2)) %
+    mod
+}
+ */

@@ -37,8 +37,8 @@ function oddEvenList (head) {
 
 function oddEvenList(head) {
   if (!head) return head
+  const evenhead = head.next
   let odd = head,
-    evenhead = head.next,
     even = evenhead
   while (even && even.next) {
     odd.next = even.next

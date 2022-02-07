@@ -4,7 +4,7 @@
  */
 
 /*
-export function isPerfectSquare(num) {
+function isPerfectSquare(num) {
   const sqrtNum = Math.sqrt(num)
   return sqrtNum === parseInt(sqrtNum)
 }

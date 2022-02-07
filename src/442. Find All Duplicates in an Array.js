@@ -4,11 +4,10 @@
  */
 
 export function findDuplicates(nums) {
-  let hash = {}
-  let duplicates = []
-  for (let i = 0; i < nums.length; i++) {
-    let char = nums[i]
-    if (!hash[char]) hash[char] = 1
+  const hash = {},
+    duplicates = []
+  for (let char of nums) {
+    if (!hash[char]) hash[char] = true
     else duplicates.push(char)
   }
   return duplicates
