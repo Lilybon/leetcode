@@ -5,7 +5,8 @@
   "scripts": {
     "format": "prettier --write \"**/*.js\"",
     "lint:fix": "eslint \"**/*.js\" --fix",
-    "test": "jest --env=node --findRelatedTests --bail --passWithNoTests"
+    "test": "jest --env=node --findRelatedTests --bail --passWithNoTests",
+    "prepare": "husky install"
   },
   "repository": "https://github.com/Lilybon/leetcode.git",
   "author": "Lilybon <zebra10029@gmail.com>",
@@ -17,15 +18,10 @@
     "babel-jest": "^27.5.1",
     "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.5.0",
-    "husky": "^4.2.5",
+    "husky": "^7.0.4",
     "jest": "^27.5.1",
     "lint-staged": "^12.3.7",
     "prettier": "^2.6.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.js": [
