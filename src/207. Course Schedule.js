@@ -7,7 +7,9 @@
 export function canFinish(numCourses, prerequisites) {
   const visited = new Set()
   const visiting = new Set()
-  const adj = Array(numCourses).map((_) => [])
+  const adj = Array(numCourses)
+    .fill()
+    .map((_) => [])
 
   for (let [u, v] of prerequisites) {
     adj[v].push(u)
