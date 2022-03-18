@@ -10,10 +10,13 @@ export function isHappy(n) {
   const hash = {}
   while (n !== 1 && !hash[n]) {
     hash[n] = true
-    n = 0
-    for (let char of n.toString()) {
-      n += char ** 2
+    let next = 0
+    while (n) {
+      const remainder = n % 10
+      next += remainder ** 2
+      n = (n - remainder) / 10
     }
+    n = next
   }
   return n === 1
 }
