@@ -29,5 +29,6 @@
       "npm run lint:fix",
       "npm run test"
     ]
-  }
+  },
+  "packageManager": "yarn@3.2.1"
 }
