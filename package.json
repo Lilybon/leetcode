@@ -12,16 +12,16 @@
   "author": "Lilybon <zebra10029@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.17.7",
-    "@babel/eslint-parser": "^7.17.0",
-    "@babel/preset-env": "^7.16.11",
+    "@babel/core": "^7.18.2",
+    "@babel/eslint-parser": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
     "babel-jest": "^27.5.1",
-    "eslint": "^8.11.0",
+    "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
-    "lint-staged": "^12.3.7",
-    "prettier": "^2.6.0"
+    "lint-staged": "^12.5.0",
+    "prettier": "^2.6.2"
   },
   "lint-staged": {
     "*.js": [
