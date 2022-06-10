@@ -1,7 +1,7 @@
 import { accountsMerge } from '../src/721. Accounts Merge'
 
 describe('accountsMerge', () => {
-  test('it returns the maximum length of an subarray that appears in both arrays', () => {
+  test('it returns the accounts in the following format: the first element of each account is the name, and the rest of the elements are emails in sorted order', () => {
     expect(
       accountsMerge([
         ['John', 'johnsmith@mail.com', 'john_newyork@mail.com'],
