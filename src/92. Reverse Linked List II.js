@@ -15,13 +15,13 @@
 
 function reverseBetween(head, m, n) {
   if (m === n) return head
-  let position = 0
-  let dummyHead = new ListNode(undefined, head)
-  let current = dummyHead
-  let mBefore
-  let mNode
-  let nNode
-  let nNext
+  const dummyHead = new ListNode(undefined, head)
+  let position = 0,
+    current = dummyHead,
+    mBefore,
+    mNode,
+    nNode,
+    nNext
 
   // step1: anchor address
   while (current) {
@@ -41,7 +41,7 @@ function reverseBetween(head, m, n) {
   current = mNode
   let after = nNext
   while (true) {
-    let before = current.next
+    const before = current.next
     current.next = after
     if (current === nNode) break
     after = current
