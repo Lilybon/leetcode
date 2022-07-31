@@ -19,7 +19,8 @@ export function longestCycle(edges) {
       }
       if (visited.has(j)) break
       visited.add(j)
-      paths.set(j, distance++)
+      paths.set(j, distance)
+      distance++
       j = edges[j]
     }
   }
