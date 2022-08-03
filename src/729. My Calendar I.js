@@ -1,6 +1,35 @@
+// Bruto Force
+// class MyCalendar {
+//   constructor() {
+//     this.calendar = []
+//   }
+//   /**
+//    * @param {number} start
+//    * @param {number} end
+//    * @return {boolean}
+//    */
+//   book(start, end) {
+//     for (let [rangeStart, rangeEnd] of this.calendar) {
+//       if (Math.max(start, rangeStart) < Math.min(end, rangeEnd)) return false
+//       if (rangeStart < start && end <= rangeEnd) return false
+//     }
+//     this.calendar.push([start, end])
+//     return true
+//   }
+// }
+
+class Node {
+  constructor(start, end) {
+    this.left = null
+    this.right = null
+    this.start = start
+    this.end = end
+  }
+}
+
 export class MyCalendar {
   constructor() {
-    this.calendar = []
+    this.root = null
   }
   /**
    * @param {number} start
@@ -8,12 +37,24 @@ export class MyCalendar {
    * @return {boolean}
    */
   book(start, end) {
-    for (let [rangeStart, rangeEnd] of this.calendar) {
-      if (Math.max(start, rangeStart) < Math.min(end, rangeEnd)) return false
-      if (rangeStart < start && end <= rangeEnd) return false
+    if (!this.root) {
+      this.root = new Node(start, end)
+      return true
     }
-    this.calendar.push([start, end])
-    return true
+    return this.insert(start, end, this.root)
+  }
+  insert(start, end, node) {
+    if (node.end <= start) {
+      if (node.right) return this.insert(start, end, node.right)
+      node.right = new Node(start, end)
+      return true
+    }
+    if (node.start >= end) {
+      if (node.left) return this.insert(start, end, node.left)
+      node.left = new Node(start, end)
+      return true
+    }
+    return false
   }
 }
 
