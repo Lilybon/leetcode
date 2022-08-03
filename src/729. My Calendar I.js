@@ -10,8 +10,7 @@
 //    */
 //   book(start, end) {
 //     for (let [rangeStart, rangeEnd] of this.calendar) {
-//       if (Math.max(start, rangeStart) < Math.min(end, rangeEnd)) return false
-//       if (rangeStart < start && end <= rangeEnd) return false
+//       if (start < rangeEnd && rangeStart < end) return false
 //     }
 //     this.calendar.push([start, end])
 //     return true
