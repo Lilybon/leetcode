@@ -7,18 +7,17 @@
 export function combinationSum3(k, n) {
   const result = [],
     row = []
-  backtracking(1, 0, 0)
+  backtracking(1, 0)
   return result
-  function backtracking(start, count, sum) {
-    if (count > k || sum > n) return
-    if (count === k && sum === n) {
+  function backtracking(start, sum) {
+    if (row.length > k || sum > n) return
+    if (row.length === k && sum === n) {
       result.push([...row])
       return
     }
-    count++
     for (let i = start; i <= 9; i++) {
       row.push(i)
-      backtracking(i + 1, count, sum + i)
+      backtracking(i + 1, sum + i)
       row.pop()
     }
   }
