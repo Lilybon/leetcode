@@ -4,14 +4,14 @@
  */
 
 export function countBadPairs(nums) {
-  const n = nums.length
-  const map = new Map()
+  const n = nums.length,
+    map = new Map()
   for (let i = 0; i < n; i++) {
-    const sum = nums[i] - i
-    map.set(sum, (map.get(sum) ?? 0) + 1)
+    const diff = nums[i] - i
+    map.set(diff, (map.get(diff) ?? 0) + 1)
   }
   let result = (n * (n - 1)) / 2
-  for (let [sum, count] of map) {
+  for (let [diff, count] of map) {
     result -= (count * (count - 1)) / 2
   }
   return result
