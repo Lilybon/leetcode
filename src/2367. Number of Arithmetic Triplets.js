@@ -5,25 +5,11 @@
  */
 
 export function arithmeticTriplets(nums, diff) {
-  const values = new Map(),
-    twins = new Map(),
-    triplets = new Map()
-
+  const set = new Set()
+  let count = 0
   for (let num of nums) {
-    values.set(num, (values.get(num) ?? 0) + 1)
+    if (set.has(num - diff) && set.has(num - 2 * diff)) count++
+    set.add(num)
   }
-
-  for (let num of nums) {
-    const target = num - diff
-    if (values.has(target))
-      twins.set(num, (twins.get(num) ?? 0) + values.get(target))
-  }
-
-  for (let num of nums) {
-    const target = num - diff
-    if (twins.has(target))
-      triplets.set(num, (triplets.get(num) ?? 0) + twins.get(target))
-  }
-
-  return [...triplets.entries()].reduce((sum, [num, count]) => sum + count, 0)
+  return count
 }
