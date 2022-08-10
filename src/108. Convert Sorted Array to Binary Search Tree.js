@@ -1,22 +1,22 @@
 /**
  * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
  * }
  */
+
 /**
  * @param {number[]} nums
  * @return {TreeNode}
  */
-function sortedArrayToBST(nums) {
-  return generateBST(0, nums.length)
-  function generateBST(start, end) {
+
+export function sortedArrayToBST(nums) {
+  return helper(0, nums.length)
+  function helper(start, end) {
     if (start >= end) return null
     const mid = Math.floor((start + end) / 2)
-    const node = new TreeNode(nums[mid])
-    node.left = generateBST(start, mid)
-    node.right = generateBST(mid + 1, end)
-    return node
+    return new TreeNode(nums[mid], helper(start, mid), helper(mid + 1, end))
   }
 }
