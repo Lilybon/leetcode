@@ -4,11 +4,11 @@
  */
 
 export function firstUniqChar(s) {
-  const dict = {}
+  const map = new Map()
   for (let i = 0; i < s.length; i++) {
-    if (dict[s[i]] !== undefined) dict[s[i]] = -1
-    else dict[s[i]] = i
+    if (map.has(s[i])) map.set(s[i], -1)
+    else map.set(s[i], i)
   }
-  const value = Object.values(dict).find((val) => val >= 0)
-  return value >= 0 ? value : -1
+  const values = [...map.values()]
+  return values.find((value) => value >= 0) ?? -1
 }
