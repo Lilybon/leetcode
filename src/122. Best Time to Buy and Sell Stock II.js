@@ -10,7 +10,7 @@
 //   dp[0][1] = -prices[0]
 //   for (let i = 1; i < n; i++) {
 //     dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i])
-//     dp[i][1] = Math.max(dp[i - 1][0] - prices[i], dp[i - 1][1])
+//     dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] - prices[i])
 //   }
 //   return dp[n - 1][0]
 // }
@@ -22,7 +22,7 @@
 //         prevBuy = -prices[0]
 //   for (let i = 1; i < n; i++) {
 //       let currentSell = Math.max(prevSell, prevBuy + prices[i]),
-//           currentBuy = Math.max(prevSell - prices[i], prevBuy)
+//           currentBuy = Math.max(prevBuy, prevSell - prices[i])
 //       prevSell = currentSell
 //       prevBuy = currentBuy
 //   }
