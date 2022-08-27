@@ -1,4 +1,6 @@
 class NumArray {
+private:
+    vector<int> prefixSums;
 public:
     NumArray(vector<int>& nums) {
         int n = nums.size();
@@ -7,12 +9,9 @@ public:
             prefixSums[i] = prefixSums[i - 1] + nums[i - 1];
         }
     }
-    
     int sumRange(int left, int right) {
         return prefixSums[right + 1] - prefixSums[left];
     }
-private:
-    vector<int> prefixSums;
 };
 
 /**
