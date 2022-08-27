@@ -4,7 +4,7 @@ export class NumArray {
    */
   constructor(nums) {
     this.nums = Array(nums.length).fill(0)
-    this.prefixSums = Array(nums.length + 1).fill(0)
+    this.sums = Array(nums.length + 1).fill(0)
     for (let i = 0; i < nums.length; i++) {
       this.update(i, nums[i])
     }
@@ -16,8 +16,8 @@ export class NumArray {
    */
   update(index, val) {
     const delta = val - this.nums[index]
-    for (let i = index + 1; i < this.prefixSums.length; i += this.lowbit(i)) {
-      this.prefixSums[i] += delta
+    for (let i = index + 1; i < this.sums.length; i += this.lowbit(i)) {
+      this.sums[i] += delta
     }
     this.nums[index] = val
   }
@@ -32,7 +32,7 @@ export class NumArray {
   getSum(index) {
     let sum = 0
     for (let i = index; i > 0; i -= this.lowbit(i)) {
-      sum += this.prefixSums[i]
+      sum += this.sums[i]
     }
     return sum
   }
