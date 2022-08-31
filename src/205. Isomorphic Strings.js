@@ -5,7 +5,6 @@
  */
 
 export function isIsomorphic(s, t) {
-  if (s.length !== t.length) return false
   const s2t = {},
     t2s = {}
   for (let i = 0; i < s.length; i++) {
