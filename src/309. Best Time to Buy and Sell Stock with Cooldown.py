@@ -1,7 +1,7 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        prevSell = prevCooldown = 0
-        prevBuy = -prices[0]
+        prev_sell = prev_cooldown = 0
+        prev_buy = -prices[0]
         for price in prices:
-            prevSell, prevBuy, prevCooldown = max(prevSell, prevBuy + price), max(prevBuy, prevCooldown - price), max(prevCooldown, prevSell)
-        return max(prevSell, prevCooldown)
+            prev_sell, prev_buy, prev_cooldown = max(prev_sell, prev_buy + price), max(prev_buy, prev_cooldown - price), max(prev_cooldown, prev_sell)
+        return max(prev_sell, prev_cooldown)

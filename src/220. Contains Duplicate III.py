@@ -1,16 +1,16 @@
 class Solution:
     def containsNearbyAlmostDuplicate(self, nums: List[int], k: int, t: int) -> bool:
-        bucketDict = {}
-        bucketSize = t + 1
+        bucket_dict = {}
+        bucket_size = t + 1
         for i in range(len(nums)):
-            bucketNumber = nums[i] // bucketSize
-            if bucketNumber in bucketDict:
+            bucketNumber = nums[i] // bucket_size
+            if bucketNumber in bucket_dict:
                 return True
-            if bucketNumber - 1 in bucketDict and abs(nums[i] - bucketDict[bucketNumber - 1]) <= t:
+            if bucketNumber - 1 in bucket_dict and abs(nums[i] - bucket_dict[bucketNumber - 1]) <= t:
                 return True
-            if bucketNumber + 1 in bucketDict and abs(nums[i] - bucketDict[bucketNumber + 1]) <= t:
+            if bucketNumber + 1 in bucket_dict and abs(nums[i] - bucket_dict[bucketNumber + 1]) <= t:
                 return True
-            bucketDict[bucketNumber] = nums[i]
+            bucket_dict[bucketNumber] = nums[i]
             if i >= k:
-                del bucketDict[nums[i - k] // bucketSize]
+                del bucket_dict[nums[i - k] // bucket_size]
         return False
