@@ -18,11 +18,7 @@ function countDaysTogether(arriveAlice, leaveAlice, arriveBob, leaveBob) {
 }
 
 function getDays(str) {
-  const daysOfMonths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+  const days = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334]
   const [MM, DD] = str.split('-')
-  let days = Number(DD)
-  for (let i = 0; i < Number(MM) - 1; i++) {
-    days += daysOfMonths[i]
-  }
-  return days
+  return days[Number(MM) - 1] + Number(DD)
 }
