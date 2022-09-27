@@ -1,3 +1,33 @@
+# Two Pointer
+# class Solution:
+#     def pushDominoes(self, dominoes: str) -> str:
+#         n = len(dominoes)
+#         ans = list(dominoes)
+#         left = 0
+#         for right in range(n):
+#             if dominoes[right] == "L" or dominoes[right] == "R" or right == n - 1:
+#                 self.fillSide(ans, left, right)
+#                 left = right
+#         return "".join(ans)
+
+#     def fillSide(self, dominoes: List[str], left: int, right: int) -> None:
+#         if dominoes[right] == "L":
+#             if dominoes[left] == "R":
+#                 while left < right:
+#                     dominoes[left] = "R"
+#                     dominoes[right] = "L"
+#                     left += 1
+#                     right -= 1
+#             else:
+#                 while left <= right:
+#                     dominoes[left] = "L"
+#                     left += 1
+#         elif dominoes[left] == "R":
+#             while left <= right:
+#                 dominoes[left] = "R"
+#                 left += 1
+
+# Calculate Force
 class Solution:
     def pushDominoes(self, dominoes: str) -> str:
         n = len(dominoes)
