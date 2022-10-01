@@ -37,16 +37,34 @@
 //     */
 // }
 
+// DP
+// function numDecodings(s) {
+//   const n = s.length,
+//     dp = Array(n + 1).fill(0)
+//   dp[0] = 1
+//   dp[1] = s[0] === '0' ? 0 : 1
+//   for (let i = 2; i <= n; i++) {
+//     const combinedN = s[i - 2] + s[i - 1]
+//     if (1 <= s[i - 1] && s[i - 1] <= 9) dp[i] += dp[i - 1]
+//     if (10 <= combinedN && combinedN <= 26) dp[i] += dp[i - 2]
+//     if (dp[i] === 0) return 0
+//   }
+//   return dp[n]
+// }
+
+// Optimized DP
 export function numDecodings(s) {
-  const n = s.length,
-    dp = Array(n + 1).fill(0)
-  dp[0] = 1
-  dp[1] = s[0] === '0' ? 0 : 1
+  const n = s.length
+  let dpNMinus2 = 1,
+    dpNMinus1 = s[0] === '0' ? 0 : 1
   for (let i = 2; i <= n; i++) {
     const combinedN = s[i - 2] + s[i - 1]
-    if (1 <= s[i - 1] && s[i - 1] <= 9) dp[i] += dp[i - 1]
-    if (10 <= combinedN && combinedN <= 26) dp[i] += dp[i - 2]
-    if (dp[i] === 0) return 0
+    let dpN = 0
+    if (1 <= s[i - 1] && s[i - 1] <= 9) dpN += dpNMinus1
+    if (10 <= combinedN && combinedN <= 26) dpN += dpNMinus2
+    if (dpN === 0) return 0
+    dpNMinus2 = dpNMinus1
+    dpNMinus1 = dpN
   }
-  return dp[n]
+  return dpNMinus1
 }
