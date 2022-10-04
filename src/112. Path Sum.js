@@ -13,12 +13,9 @@
  * @return {boolean}
  */
 
-function hasPathSum(root, sum) {
-  return helper(root)
-  function helper(root, currentSum = 0) {
-    if (!root) return false
-    currentSum += root.val
-    if (!root.left && !root.right && currentSum === sum) return true
-    return helper(root.left, currentSum) || helper(root.right, currentSum)
-  }
+function hasPathSum(root, targetSum) {
+  if (!root) return false
+  targetSum -= root.val
+  if (!root.left && !root.right) return targetSum === 0
+  return hasPathSum(root.left, targetSum) || hasPathSum(root.right, targetSum)
 }
