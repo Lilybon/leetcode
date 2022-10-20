@@ -20,12 +20,10 @@ export function intToRoman(num) {
     'IV',
     'I',
   ]
-  let result = ''
+  let ans = ''
   for (let i in values) {
-    while (num >= values[i]) {
-      num -= values[i]
-      result += chars[i]
-    }
+    ans += chars[i].repeat(parseInt(num / values[i]))
+    num %= values[i]
   }
-  return result
+  return ans
 }
