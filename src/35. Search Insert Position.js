@@ -4,10 +4,17 @@
  * @return {number}
  */
 export function searchInsert(nums, target) {
-  if (target < nums[0]) return 0
-  const len = nums.length
-  if (target > nums[len - 1]) return len
-  for (let i = 0; i < len; i++) {
-    if (target == nums[i] || target < nums[i]) return i
+  let left = 0,
+    right = nums.length - 1
+  while (left <= right) {
+    const mid = Math.floor((right + left) / 2)
+    if (nums[mid] === target) {
+      return mid
+    } else if (nums[mid] > target) {
+      right = mid - 1
+    } else {
+      left = mid + 1
+    }
   }
+  return left
 }
