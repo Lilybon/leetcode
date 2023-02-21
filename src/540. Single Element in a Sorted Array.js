@@ -11,12 +11,10 @@ export function singleNonDuplicate(nums) {
   let left = 0,
     right = nums.length - 1
   while (left <= right) {
-    const mid = Math.floor((right + left) / 2)
-    if (mid % 2 === 0 && nums[mid] === nums[mid + 1]) {
-      left = mid + 1
-    } else if (mid % 2 === 0 && nums[mid] !== nums[mid + 1]) {
-      right = mid - 1
-    } else if (mid % 2 === 1 && nums[mid] === nums[mid - 1]) {
+    const mid = Math.floor((right + left) / 2),
+      // compare = mid % 2 == 0 ? mid + 1 : mid - 1
+      compare = mid ^ 1
+    if (nums[mid] == nums[compare]) {
       left = mid + 1
     } else {
       right = mid - 1
