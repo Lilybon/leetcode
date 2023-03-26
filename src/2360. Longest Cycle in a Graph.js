@@ -2,26 +2,27 @@
  * @param {number[]} edges
  * @return {number}
  */
-
 export function longestCycle(edges) {
-  const visited = new Set()
+  const n = edges.length
+  const visited = Array(n).fill(false)
   let maxCyclePath = -1
-
-  for (let i = 0; i < edges.length; i++) {
-    if (visited.has(i)) continue
+  for (let i = 0; i < n; i++) {
+    if (visited[i]) {
+      continue
+    }
     const paths = new Map()
-    let j = i,
-      distance = 0
-    while (j !== -1) {
+    let distance = 0
+    for (let j = i; j !== -1; j = edges[j]) {
       if (paths.has(j)) {
         maxCyclePath = Math.max(maxCyclePath, distance - paths.get(j))
         break
       }
-      if (visited.has(j)) break
-      visited.add(j)
+      if (visited[j]) {
+        break
+      }
+      visited[j] = true
       paths.set(j, distance)
       distance++
-      j = edges[j]
     }
   }
 
