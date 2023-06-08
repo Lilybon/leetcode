@@ -4,12 +4,15 @@
  */
 
 export function countNegatives(grid) {
-  let count = 0
-  for (let i = grid.length - 1; i >= 0; i--) {
-    for (let j = grid[0].length - 1; j >= 0; j--) {
-      if (grid[i][j] >= 0) break
-      count++
+  const m = grid.length,
+    n = grid[0].length
+  let count = 0,
+    j = n - 1
+  for (let i = 0; i < m; ++i) {
+    while (j >= 0 && grid[i][j] < 0) {
+      j--
     }
+    count += n - 1 - j
   }
   return count
 }
