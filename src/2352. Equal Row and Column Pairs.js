@@ -4,28 +4,27 @@
  */
 
 export function equalPairs(grid) {
-  const m = grid.length,
-    n = grid[0].length,
+  const n = grid.length,
     trie = {}
-  for (let i = 0; i < m; i++) {
-    let container = trie
+  for (let i = 0; i < n; i++) {
+    let dict = trie
     for (let j = 0; j < n; j++) {
       const char = grid[i][j]
-      if (!container[char]) container[char] = {}
-      container = container[char]
+      if (!dict[char]) dict[char] = {}
+      dict = dict[char]
     }
-    container.count = (container.count || 0) + 1
+    dict.count = (dict.count || 0) + 1
   }
 
   let count = 0
   for (let i = 0; i < n; i++) {
-    let container = trie
-    for (let j = 0; j < m; j++) {
+    let dict = trie
+    for (let j = 0; j < n; j++) {
       const char = grid[j][i]
-      if (!container[char]) break
-      container = container[char]
+      if (!dict[char]) break
+      dict = dict[char]
     }
-    if (container.count) count += container.count
+    if (dict.count) count += dict.count
   }
   return count
 }
