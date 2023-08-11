@@ -20,7 +20,7 @@ function buildMatrix(k, rowConditions, colConditions) {
       queue = [],
       results = [],
       tupleConditions = [...new Set(conditions.map(String))].map((value) =>
-        value.split(',').map((v) => +v)
+        value.split(',').map((v) => +v),
       )
     for (let [from, to] of tupleConditions) {
       nxt[from - 1].add(to - 1)

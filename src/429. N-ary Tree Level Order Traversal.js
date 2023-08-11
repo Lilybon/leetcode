@@ -20,7 +20,7 @@ function levelOrder(root) {
     const vals = nodes.map((node) => node.val)
     const children = nodes.reduce(
       (list, node) => list.concat(node.children),
-      []
+      [],
     )
     results.push(vals)
     if (children.length) queue.push(children)

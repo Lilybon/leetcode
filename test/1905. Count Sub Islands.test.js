@@ -17,8 +17,8 @@ describe('countSubIslands', () => {
           [0, 1, 0, 0, 0],
           [1, 0, 1, 1, 0],
           [0, 1, 0, 1, 0],
-        ]
-      )
+        ],
+      ),
     ).toBe(3)
     expect(
       countSubIslands(
@@ -35,8 +35,8 @@ describe('countSubIslands', () => {
           [0, 1, 0, 1, 0],
           [0, 1, 0, 1, 0],
           [1, 0, 0, 0, 1],
-        ]
-      )
+        ],
+      ),
     ).toBe(2)
   })
 })

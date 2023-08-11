@@ -5,7 +5,7 @@ describe('reverseOnlyLetters', () => {
     expect(reverseOnlyLetters('ab-cd')).toBe('dc-ba')
     expect(reverseOnlyLetters('a-bC-dEf-ghIj')).toBe('j-Ih-gfE-dCba')
     expect(reverseOnlyLetters('Test1ng-Leet=code-Q!')).toBe(
-      'Qedo1ct-eeLg=ntse-T!'
+      'Qedo1ct-eeLg=ntse-T!',
     )
   })
 })

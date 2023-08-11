@@ -13,8 +13,8 @@ describe('reachableNodes', () => {
           [0, 5],
           [5, 6],
         ],
-        [4, 5]
-      )
+        [4, 5],
+      ),
     ).toBe(4)
     expect(
       reachableNodes(
@@ -27,8 +27,8 @@ describe('reachableNodes', () => {
           [3, 2],
           [6, 5],
         ],
-        [4, 2, 1]
-      )
+        [4, 2, 1],
+      ),
     ).toBe(3)
   })
 })

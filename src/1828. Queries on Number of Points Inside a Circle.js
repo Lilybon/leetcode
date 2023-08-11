@@ -6,7 +6,7 @@
 
 export function countPoints(points, queries) {
   return queries.map(([cx, cy, cr]) =>
-    points.reduce((sum, [px, py]) => sum + inRange(cx - px, cy - py, cr), 0)
+    points.reduce((sum, [px, py]) => sum + inRange(cx - px, cy - py, cr), 0),
   )
 }
 

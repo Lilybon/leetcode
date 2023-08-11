@@ -18,7 +18,7 @@ export function minPathCost(grid, moveCost) {
       for (let k = 0; k < n; k++) {
         dp[i][j] = Math.min(
           dp[i][j],
-          dp[i - 1][k] + moveCost[grid[i - 1][k]][j] + grid[i][j]
+          dp[i - 1][k] + moveCost[grid[i - 1][k]][j] + grid[i][j],
         )
       }
     }

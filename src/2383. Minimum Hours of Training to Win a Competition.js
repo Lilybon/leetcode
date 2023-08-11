@@ -10,7 +10,7 @@ export function minNumberOfHours(
   initialEnergy,
   initialExperience,
   energy,
-  experience
+  experience,
 ) {
   const n = energy.length
   let requiredEnergy = 0,

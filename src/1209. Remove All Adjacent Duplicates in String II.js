@@ -13,6 +13,6 @@ export function removeDuplicates(s, k) {
   }
   return stack.reduce(
     (result, { char, count }) => result + char.repeat(count),
-    ''
+    '',
   )
 }

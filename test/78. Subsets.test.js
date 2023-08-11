@@ -12,7 +12,7 @@ describe('subsets', () => {
         [1, 3],
         [2, 3],
         [1, 2, 3],
-      ])
+      ]),
     )
     expect(subsets([0])).toEqual([[], [0]])
   })

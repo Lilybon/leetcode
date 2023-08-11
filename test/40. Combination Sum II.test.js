@@ -8,10 +8,10 @@ describe('combinationSum2', () => {
         [1, 2, 5],
         [1, 7],
         [2, 6],
-      ])
+      ]),
     )
     expect(combinationSum2([2, 5, 2, 1, 2], 5)).toEqual(
-      expect.arrayContaining([[1, 2, 2], [5]])
+      expect.arrayContaining([[1, 2, 2], [5]]),
     )
   })
 })

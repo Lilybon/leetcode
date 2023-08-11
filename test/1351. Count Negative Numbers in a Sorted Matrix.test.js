@@ -8,19 +8,19 @@ describe('countNegatives', () => {
         [3, 2, 1, -1],
         [1, 1, -1, -2],
         [-1, -1, -2, -3],
-      ])
+      ]),
     ).toBe(8)
     expect(
       countNegatives([
         [3, 2],
         [1, 0],
-      ])
+      ]),
     ).toBe(0)
     expect(
       countNegatives([
         [1, -1],
         [-1, -1],
-      ])
+      ]),
     ).toBe(3)
     expect(countNegatives([[-1]])).toBe(1)
   })

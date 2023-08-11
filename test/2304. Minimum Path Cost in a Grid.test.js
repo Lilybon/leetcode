@@ -16,8 +16,8 @@ describe('minPathCost', () => {
           [18, 6],
           [2, 4],
           [14, 3],
-        ]
-      )
+        ],
+      ),
     ).toBe(17)
     expect(
       minPathCost(
@@ -32,8 +32,8 @@ describe('minPathCost', () => {
           [8, 1, 13],
           [9, 10, 25],
           [5, 3, 2],
-        ]
-      )
+        ],
+      ),
     ).toBe(6)
   })
 })

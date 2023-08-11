@@ -8,14 +8,14 @@ describe('maxIncreaseKeepingSkyline', () => {
         [2, 4, 5, 7],
         [9, 2, 6, 3],
         [0, 3, 1, 0],
-      ])
+      ]),
     ).toBe(35)
     expect(
       maxIncreaseKeepingSkyline([
         [0, 0, 0],
         [0, 0, 0],
         [0, 0, 0],
-      ])
+      ]),
     ).toBe(0)
   })
 })
