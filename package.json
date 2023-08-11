@@ -30,5 +30,5 @@
       "npm run test"
     ]
   },
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@3.6.1"
 }
