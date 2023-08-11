@@ -5,8 +5,8 @@ describe('suggestedProducts', () => {
     expect(
       suggestedProducts(
         ['mobile', 'mouse', 'moneypot', 'monitor', 'mousepad'],
-        'mouse'
-      )
+        'mouse',
+      ),
     ).toEqual([
       ['mobile', 'moneypot', 'monitor'],
       ['mobile', 'moneypot', 'monitor'],
@@ -15,10 +15,10 @@ describe('suggestedProducts', () => {
       ['mouse', 'mousepad'],
     ])
     expect(suggestedProducts(['havana'], 'havana')).toEqual(
-      Array.from(Array(6), () => ['havana'])
+      Array.from(Array(6), () => ['havana']),
     )
     expect(
-      suggestedProducts(['bags', 'baggage', 'banner', 'box', 'cloths'], 'bags')
+      suggestedProducts(['bags', 'baggage', 'banner', 'box', 'cloths'], 'bags'),
     ).toEqual([
       ['baggage', 'bags', 'banner'],
       ['baggage', 'bags', 'banner'],
@@ -26,7 +26,7 @@ describe('suggestedProducts', () => {
       ['bags'],
     ])
     expect(suggestedProducts(['havana'], 'tatiana')).toEqual(
-      Array.from(Array(7), () => [])
+      Array.from(Array(7), () => []),
     )
   })
 })

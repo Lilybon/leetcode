@@ -9,7 +9,7 @@ describe('minRefuelStops', () => {
         [20, 30],
         [30, 30],
         [60, 40],
-      ])
+      ]),
     ).toBe(2)
   })
   test('it return -1 if it cannot reach the destination', () => {

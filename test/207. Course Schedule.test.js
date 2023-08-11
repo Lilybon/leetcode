@@ -7,7 +7,7 @@ describe('canFinish', () => {
       canFinish(2, [
         [1, 0],
         [0, 1],
-      ])
+      ]),
     ).toBe(false)
   })
 })

@@ -7,7 +7,7 @@ describe('groupAnagrams', () => {
         ['bat'],
         expect.arrayContaining(['nat', 'tan']),
         expect.arrayContaining(['ate', 'eat', 'tea']),
-      ])
+      ]),
     )
     expect(groupAnagrams([''])).toEqual([['']])
     expect(groupAnagrams(['a'])).toEqual([['a']])

@@ -7,7 +7,7 @@ describe('reverseWords', () => {
     expect(reverseWords('a good   example')).toBe('example good a')
     expect(reverseWords('  Bob    Loves  Alice   ')).toBe('Alice Loves Bob')
     expect(reverseWords('Alice does not even like bob')).toBe(
-      'bob like even not does Alice'
+      'bob like even not does Alice',
     )
   })
 })

@@ -6,13 +6,13 @@ describe('oddCells', () => {
       oddCells(2, 3, [
         [0, 1],
         [1, 1],
-      ])
+      ]),
     ).toBe(6)
     expect(
       oddCells(2, 2, [
         [1, 1],
         [0, 0],
-      ])
+      ]),
     ).toBe(0)
   })
 })

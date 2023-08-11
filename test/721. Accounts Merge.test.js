@@ -8,7 +8,7 @@ describe('accountsMerge', () => {
         ['John', 'johnsmith@mail.com', 'john00@mail.com'],
         ['Mary', 'mary@mail.com'],
         ['John', 'johnnybravo@mail.com'],
-      ])
+      ]),
     ).toEqual(
       expect.arrayContaining([
         [
@@ -19,7 +19,7 @@ describe('accountsMerge', () => {
         ],
         ['Mary', 'mary@mail.com'],
         ['John', 'johnnybravo@mail.com'],
-      ])
+      ]),
     )
     expect(
       accountsMerge([
@@ -28,7 +28,7 @@ describe('accountsMerge', () => {
         ['Ethan', 'Ethan5@m.co', 'Ethan4@m.co', 'Ethan0@m.co'],
         ['Hanzo', 'Hanzo3@m.co', 'Hanzo1@m.co', 'Hanzo0@m.co'],
         ['Fern', 'Fern5@m.co', 'Fern1@m.co', 'Fern0@m.co'],
-      ])
+      ]),
     ).toEqual(
       expect.arrayContaining([
         ['Ethan', 'Ethan0@m.co', 'Ethan4@m.co', 'Ethan5@m.co'],
@@ -36,7 +36,7 @@ describe('accountsMerge', () => {
         ['Hanzo', 'Hanzo0@m.co', 'Hanzo1@m.co', 'Hanzo3@m.co'],
         ['Kevin', 'Kevin0@m.co', 'Kevin3@m.co', 'Kevin5@m.co'],
         ['Fern', 'Fern0@m.co', 'Fern1@m.co', 'Fern5@m.co'],
-      ])
+      ]),
     )
   })
 })

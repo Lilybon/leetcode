@@ -9,7 +9,7 @@ describe('numMatchingSubseq', () => {
         'ja',
         'ahbwzgqnuk',
         'tnmlanowax',
-      ])
+      ]),
     ).toBe(2)
   })
 })

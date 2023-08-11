@@ -7,7 +7,7 @@ describe('findRedundantConnection', () => {
         [1, 2],
         [1, 3],
         [2, 3],
-      ])
+      ]),
     ).toEqual([2, 3])
     expect(
       findRedundantConnection([
@@ -16,7 +16,7 @@ describe('findRedundantConnection', () => {
         [3, 4],
         [1, 4],
         [1, 5],
-      ])
+      ]),
     ).toEqual([1, 4])
   })
 })

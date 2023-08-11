@@ -41,7 +41,7 @@ export function minDistance(word1, word2) {
         : Math.min(
             helper(l1 - 1, l2 - 1),
             helper(l1 - 1, l2),
-            helper(l1, l2 - 1)
+            helper(l1, l2 - 1),
           ) + 1
     return (dp[l1][l2] = min)
   }

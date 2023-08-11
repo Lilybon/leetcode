@@ -8,8 +8,8 @@ describe('maxSumSubmatrix', () => {
           [1, 0, 1],
           [0, -2, 3],
         ],
-        2
-      )
+        2,
+      ),
     ).toBe(2)
     expect(maxSumSubmatrix([[2, 2, -1]], 3)).toBe(3)
     expect(maxSumSubmatrix([[2, 2, -1]], 0)).toBe(-1)

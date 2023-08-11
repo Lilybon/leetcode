@@ -13,11 +13,11 @@ describe('letterCombinations', () => {
         'cd',
         'ce',
         'cf',
-      ])
+      ]),
     )
     expect(letterCombinations('')).toEqual([])
     expect(letterCombinations('2')).toEqual(
-      expect.arrayContaining(['a', 'b', 'c'])
+      expect.arrayContaining(['a', 'b', 'c']),
     )
   })
 })

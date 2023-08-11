@@ -13,7 +13,7 @@ export function createTree(nums) {
     return new TreeNode(
       nums[index],
       createNode(2 * index + 1),
-      createNode(2 * index + 2)
+      createNode(2 * index + 2),
     )
   }
 }

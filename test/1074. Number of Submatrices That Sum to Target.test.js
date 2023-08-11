@@ -9,8 +9,8 @@ describe('numSubmatrixSumTarget', () => {
           [1, 1, 1],
           [0, 1, 0],
         ],
-        0
-      )
+        0,
+      ),
     ).toBe(4)
     expect(
       numSubmatrixSumTarget(
@@ -18,8 +18,8 @@ describe('numSubmatrixSumTarget', () => {
           [1, -1],
           [-1, 1],
         ],
-        0
-      )
+        0,
+      ),
     ).toBe(5)
     expect(numSubmatrixSumTarget([[904]], 0)).toBe(0)
   })

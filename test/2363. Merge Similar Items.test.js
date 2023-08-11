@@ -12,8 +12,8 @@ describe('mergeSimilarItems', () => {
         [
           [3, 1],
           [1, 5],
-        ]
-      )
+        ],
+      ),
     ).toEqual([
       [1, 6],
       [3, 9],
@@ -30,8 +30,8 @@ describe('mergeSimilarItems', () => {
           [2, 1],
           [3, 2],
           [1, 3],
-        ]
-      )
+        ],
+      ),
     ).toEqual([
       [1, 4],
       [2, 4],
