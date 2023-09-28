@@ -3,12 +3,18 @@
  * @return {number[]}
  */
 
-function sortArrayByParity(A) {
-  let evens = []
-  let odds = []
-  for (let item of A) {
-    if (item % 2) odds.push(item)
-    else evens.push(item)
+function sortArrayByParity(nums) {
+  let [i, j] = [0, nums.length - 1]
+
+  while (i < j) {
+    while (i < j && nums[i] % 2 === 0) {
+      i++
+    }
+    while (i < j && nums[j] % 2 === 1) {
+      j--
+    }
+    ;[nums[i], nums[j]] = [nums[j], nums[i]]
   }
-  return evens.concat(odds)
+
+  return nums
 }
